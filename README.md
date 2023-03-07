@@ -6,5 +6,5 @@
 -Tabla de productos
   Ya que toca vincularlo a la base de datos, toca generar una sola fila de las categorias de las columnas (Nombre, precio, categoria, etc) y otra fila con un producto de ejemplo, debe de tener reservado un tamaño para toda la tabla (Entenderan cuando vean CSS).
 -Pestaña para añadir o eliminar productos nuevos. También editar productos.
--Pestaña de busqueda de productos, añadir o eliminar stock.(kevin,daniel)
+-Pestaña de busqueda de productos, añadir o eliminar inventario.(kevin,daniel)
 
