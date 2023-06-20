@@ -22,8 +22,8 @@
 2. Pestaña de Agregar Producto-Pestaña de Editar Producto (Samuel)
 4. Pestaña de Gestión de Stock
 5. Pestaña de Promociones y Descuentos (daniel)
-6. Pestaña de Estadísticas de Ventas
+6. Pestaña de Estadísticas de Ventas (cris)
 7. Pestaña de Gestión de Pedidos (mijail)
-8. Pestaña de Configuración de Pagos
+8. Pestaña de Configuración de Pagos (cris)
 
 
