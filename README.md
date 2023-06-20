@@ -7,16 +7,16 @@
 4. Pestaña de Detalles del Producto (Jose)
 5. Pestaña de Carrito de Compras (Jose)
 6. Pestaña de Mi Cuenta 
-7. Pestaña de Navegación en el Mapa
+7. Pestaña de Navegación en el Mapa (cris)
 8. Pestaña de Filtros de Búsqueda Avanzada
-9. Pestaña de Soporte o Contacto
+9. Pestaña de Soporte o Contacto (cris)
 10. Pestaña de Explorar Tiendas
 11. Pestaña de Subastas
 12. Pestaña de Favoritos(daniel)
 13. Pestaña de Valoraciones y Reseñas(daniel)
 14. Pestaña de Anuncios Locales
 15. Pestaña de Envío y Entrega
-16. Pestaña de inicio y registro
+16. Pestaña de inicio y registro (cris)
 
 ## Pestañas de vendedor
 1. Pestaña de Administración de Productos (Jose)
