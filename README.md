@@ -1,7 +1,7 @@
 # SANSITO-MAPS
 
 ## Por hacer — Pestañas generales/de usuario
-1. Pestaña de Inicio 
+1. Pestaña de Inicio (Jose)
 2. Pestaña de Búsqueda (mijail)
 3. Pestaña de Categorías (mijail)
 4. Pestaña de Detalles del Producto (Jose)
