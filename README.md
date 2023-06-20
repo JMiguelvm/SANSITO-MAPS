@@ -12,8 +12,8 @@
 9. Pestaña de Soporte o Contacto
 10. Pestaña de Explorar Tiendas
 11. Pestaña de Subastas
-12. Pestaña de Favoritos
-13. Pestaña de Valoraciones y Reseñas
+12. Pestaña de Favoritos(daniel)
+13. Pestaña de Valoraciones y Reseñas(daniel)
 14. Pestaña de Anuncios Locales
 15. Pestaña de Envío y Entrega
 16. Pestaña de inicio y registro
@@ -23,7 +23,7 @@
 2. Pestaña de Agregar Producto
 3. Pestaña de Editar Producto
 4. Pestaña de Gestión de Stock
-5. Pestaña de Promociones y Descuentos 
+5. Pestaña de Promociones y Descuentos (daniel)
 6. Pestaña de Estadísticas de Ventas
 7. Pestaña de Gestión de Pedidos (mijail)
 8. Pestaña de Configuración de Pagos
