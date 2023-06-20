@@ -1,12 +1,12 @@
 # SANSITO-MAPS
 
 ## Por hacer — Pestañas generales/de usuario
-1. Pestaña de Inicio
-2. Pestaña de Búsqueda
+1. Pestaña de Inicio (mijail)
+2. Pestaña de Búsqueda (mijail)
 3. Pestaña de Categorías
 4. Pestaña de Detalles del Producto (Jose)
 5. Pestaña de Carrito de Compras (Jose)
-6. Pestaña de Mi Cuenta
+6. Pestaña de Mi Cuenta (mijail)
 7. Pestaña de Navegación en el Mapa
 8. Pestaña de Filtros de Búsqueda Avanzada
 9. Pestaña de Soporte o Contacto
