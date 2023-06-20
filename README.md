@@ -4,8 +4,8 @@
 1. Pestaña de Inicio
 2. Pestaña de Búsqueda
 3. Pestaña de Categorías
-4. Pestaña de Detalles del Producto
-5. Pestaña de Carrito de Compras
+4. Pestaña de Detalles del Producto (Jose)
+5. Pestaña de Carrito de Compras (Jose)
 6. Pestaña de Mi Cuenta
 7. Pestaña de Navegación en el Mapa
 8. Pestaña de Filtros de Búsqueda Avanzada
@@ -19,7 +19,7 @@
 16. Pestaña de inicio y registro
 
 ## Pestañas de vendedor
-1. Pestaña de Administración de Productos
+1. Pestaña de Administración de Productos (Jose)
 2. Pestaña de Agregar Producto
 3. Pestaña de Editar Producto
 4. Pestaña de Gestión de Stock
