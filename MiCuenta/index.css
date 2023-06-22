@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.navBar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 70px;
+    background-color: red;
+}
+
+.searchBar {
+    margin: auto 0;
+    margin-left: 15px;
+    display: inline-block;
+    grid-column: span 1;
+}
+
+#sansitoMaps {
+    margin: auto 0;
+    text-align: center;
+    display: inline-block;
+    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: yellow;
+    grid-column: span 1;
+}
+
+#userAccess {
+    margin: auto 0;
+    width: 70px;
+    height: 70px;
+    background: none;
+    justify-self: end;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#userAccess > i {
+     color: white;
+}
+
+#userAccess:hover {
+    transition: 0.3s;
+    background: rgb(230, 0, 0);
+}
+
+#searchText {
+    padding: 5px;
+    height: 30px;
+    border: none;
+    background-color: rgb(200, 0, 0);
+    border-radius: 0.5em;
+    font-size: 15px;
+    font-weight: blod;
+    color: white;
+}
+
+.searchBar > button {
+    width: 20px;
+    height: 20px;
+    color: white;
+    background: none;
+    justify-self: end;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
