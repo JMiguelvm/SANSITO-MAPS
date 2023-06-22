@@ -4,3 +4,20 @@
     outline: none;
     font-family: 'Roboto', sans-serif;
 }
+
+.cart__product {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: 400px;
+    height: 400px;
+    width: 700px;
+    background-color: red;
+}
+
+#product__img {
+    grid-column: 1/2;
+}
+
+#product__content {
+    grid-column: 2/4;
+}

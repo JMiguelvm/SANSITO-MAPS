@@ -13,24 +13,27 @@
 </head>
 <body>
 <div id="cart">
-    <div class="cart__item">
-        <img src="https://picsum.photos/400/400.jpg" width="400" height="400" id="cart__item__img">
-        <p id="cart__item__name">Nombre de producto</p>
-        <span id="cart__item__price">$99.99</span>
-        <span id="cart__item__status">Disponible</span>
-        <div id="cart__item__count">
-            <span>Cantidad:</span>
-            <select name="" id="cart__item__count--select">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="more">Más de 5 unidades</option>
-            </select>
+    <div class="cart__product">
+        <img id="product__img" src="https://picsum.photos/400/400.jpg" width="200" height="200" id="item__img">
+        <div id="product__content">
+            <p id="product__content__name" class="product__content__item">Nombre de producto</p>
+            <span id="product__content__price" class="product__content__item">$99.99</span>
+            <span id="product__content__status" class="product__content__item">Disponible</span>
+            <div id="product__content__count" class="product__content__item">
+                <span>Cantidad:</span>
+                <select name="" id="product__content__count--select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="more">Más de 5 unidades</option>
+                </select>
+            </div>
+            <button id="product__content__delete" class="product__content__item">Eliminar</button>
+            <button id="product__content__saveToLater" class="product__content__item">Guardar para más tarde</button>
         </div>
-        <button id="cart__item__delete">Eliminar</button>
-        <button id="cart__item__saveToLater">Guardar para más tarde</button></div>
+    </div>
 </div>
 </body>
 </html>
