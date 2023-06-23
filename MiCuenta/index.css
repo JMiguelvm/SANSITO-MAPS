@@ -1,5 +1,5 @@
 * {
-    margin: 0px;
+    margin: 0;
     box-sizing: border-box;
     outline: none;
 }
@@ -70,3 +70,38 @@
     cursor: pointer;
 }
 
+#myAccount {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+}
+
+#myAccount__options{
+    height: 100%;
+    display: inline-block;
+    background-color: #DFDFDF;
+    width: 30%;.
+}
+
+#myAccount__main{
+    display: inline-block;
+    background-color: blue;
+    width: 70%;
+}
+
+#main__profilePicture{
+    top: 150px;
+    right: 700px;                                 
+}
+
+#main__exampleText{
+    top: 275px;
+    right: 200px;
+    font-size: 50px;
+}
+
+.main__btn__text{
+    top: 400px;
+    right: 389px;
+    font-size: 30px;
+}

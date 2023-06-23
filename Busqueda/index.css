@@ -16,6 +16,34 @@
   height: 20px;
 }
 
+nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+  display: none;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.menu li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
   .product-container {
     display: flex;
     flex-wrap: wrap;

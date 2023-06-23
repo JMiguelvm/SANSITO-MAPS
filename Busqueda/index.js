@@ -22,3 +22,16 @@ function filterProducts() {
 
 // Evento de tecla presionada en el campo de búsqueda
 searchInput.addEventListener('keyup', filterProducts);
+
+//Barra de categorias
+var menuBtn = document.getElementById('menu-btn');
+var menu = document.getElementById('menu');
+
+menuBtn.addEventListener('click', function() {
+  if (menu.style.display === 'none') {
+    menu.style.display = 'block';
+  } else {
+    menu.style.display = 'none';
+  }
+});
+
