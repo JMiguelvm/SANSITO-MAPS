@@ -36,7 +36,7 @@ Desarrollar una aplicación y/o web para dar un enfoque digital a las plazas com
 ## Pestañas de vendedor
 1. Pestaña de Administración de Productos (Jose)
 2. Pestaña de Agregar Producto-Pestaña de Editar Producto (Samuel)
-4. Pestaña de Gestión de Stock
+4. Pestaña de Gestión de Stock (mijail)
 5. Pestaña de Promociones y Descuentos (daniel)
 6. Pestaña de Estadísticas de Ventas (cris)
 7. Pestaña de Gestión de Pedidos (mijail)
