@@ -4,11 +4,18 @@
     outline: none;
 }
 
+@font-face {
+    font-family: 'Want Coffe';
+    src: url('resources/Want\ Coffee.ttf') format('truetype');
+}
+
 .navBar {
+    position: fixed;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 70px;
-    background-color: red;
+    background-color: #CA1214;
 }
 
 .searchBar {
@@ -23,8 +30,8 @@
     text-align: center;
     display: inline-block;
     font-size: 40px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: yellow;
+    font-family:'Want Coffe', sans-serif;
+    color: #F9CE3A;
     grid-column: span 1;
 }
 
@@ -45,18 +52,22 @@
 
 #userAccess:hover {
     transition: 0.3s;
-    background: rgb(230, 0, 0);
+    background: #b30f12;
 }
 
 #searchText {
     padding: 5px;
     height: 30px;
     border: none;
-    background-color: rgb(200, 0, 0);
+    background-color: #b30f12;
     border-radius: 0.5em;
     font-size: 15px;
     font-weight: blod;
-    color: white;
+    font-weight: bold;
+}
+
+#searchText::placeholder {
+    color: rgb(214, 214, 214);
 }
 
 .searchBar > button {
