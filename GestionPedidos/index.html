@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navBar">
+            <div class="searchBar">
+                <input type="text" id="searchText" placeholder="Buscar...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <p id="sansitoMaps">SANSITO-MAPS</p>
+            <button id="userAccess"><i class="fa-solid fa-right-to-bracket"></i></button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab" onclick="changeTab('incompletos')">Pedidos Incompletos</div>
+            <div class="tab" onclick="changeTab('completos')">Pedidos Completos</div>
+        </div>
+
+        <div class="pedidos">
+            <div class="pedido incompleto">
+                <h3>Pedido Angelica488</h3>
+                <p>Ropa Mujer Tigresa XS</p>
+            </div>
+            <div class="pedido incompleto">
+                <h3>Pedido Laura987</h3>
+                <p>Accesorios Joyería Collar Plata</p>
+            </div>
+            <div class="pedido incompleto">
+                <h3>Pedido Pedro654</h3>
+                <p>Zapatos Deportivos Nike Air Max 90</p>
+            </div>
+            <div class="pedido incompleto">
+                <h3>Pedido Ana321</h3>
+                <p>Hogar Juego de Sábanas Queen Size</p>
+            </div>
+            <div class="pedido incompleto">
+                <h3>Pedido Angelica488</h3>
+                <p>Ropa Mujer Tigresa XS</p>
+            </div>
+            <div class="pedido completo">
+                <h3>Pedido Juan123</h3>
+                <p>Ropa Hombre Camisa Azul L</p>
+            </div>
+            <div class="pedido incompleto">
+                <h3>Pedido Maria789</h3>
+                <p>Electrónica Smartphone Samsung Galaxy S20</p>
+            </div>
+            <div class="pedido completo">
+                <h3>Pedido Carlos456</h3>
+                <p>Libro Ciencia Ficción "Dune"</p>
+            </div>
+            <div class="pedido completo">
+                <h3>Pedido Ricardo789</h3>
+                <p>Electrónica Smartphone iPhone 12 Pro</p>
+            </div>
+            <div class="pedido completo">
+                <h3>Pedido Andrea246</h3>
+                <p>Belleza Kit de Maquillaje Profesional</p>
+            </div>
+            <div class="pedido completo">
+                <h3>Pedido Luisa357</h3>
+                <p>Ropa Hombre Pantalón Vaquero Talla 32</p>
+            </div>
+            <div class="pedido completo">
+                <h3>Pedido Mariana468</h3>
+                <p>Libro Novela Romántica "Orgullo y Prejuicio"</p>
+            </div>
+            <div class="pedido completo">
+                <h3>Pedido Angelica488</h3>
+                <p>Ropa Mujer Tigresa XS</p>
+            </div>
+            
+            <div class="pedido completo">
+                <h3>Pedido Sofia246</h3>
+                <p>Ropa Hombre Camisa de Manga Larga M</p>
+            </div>
+            
+            <div class="pedido completo">
+                <h3>Pedido Luis450</h3>
+                <p>Electrónica Auriculares Inalámbricos Bluetooth</p>
+            </div>
+            
+            <div class="pedido completo">
+                <h3>Pedido Ana723</h3>
+                <p>Hogar Juego de Cuchillos de Cocina</p>
+            </div>
+            
+            <div class="pedido completo">
+                <h3>Pedido Carlos890</h3>
+                <p>Deportes Balón de Fútbol Tamaño 5</p>
+            </div>
+            
+            <div class="pedido completo">
+                <h3>Pedido Laura579</h3>
+                <p>Juguetes Set de Construcción de Bloques</p>
+            </div>
+            
+            <div class="pedido completo">
+                <h3>Pedido Javier215</h3>
+                <p>Belleza Set de Brochas de Maquillaje</p>
+            </div>
+            
+            <div class="pedido completo">
+                <h3>Pedido Marta753</h3>
+                <p>Libro Suspenso "La Chica del Tren"</p>
+            </div>
+            
+            <div class="pedido completo">
+                <h3>Pedido Juan365</h3>
+                <p>Ropa Mujer Blusa Estampada Talla S</p>
+            </div>
+            
+            <div class="pedido completo">
+                <h3>Pedido Maria864</h3>
+                <p>Electrónica Tablet Android 10 Pulgadas</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function changeTab(tab) {
+            var pedidos = document.querySelectorAll('.pedido');
+            pedidos.forEach(function(pedido) {
+                if (tab === 'incompletos') {
+                    pedido.style.display = pedido.classList.contains('incompleto') ? 'block' : 'none';
+                } else if (tab === 'completos') {
+                    pedido.style.display = pedido.classList.contains('completo') ? 'block' : 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
