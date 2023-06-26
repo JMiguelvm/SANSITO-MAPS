@@ -85,23 +85,42 @@
 
 #myAccount__main{
     display: inline-block;
-    background-color: blue;
+    background-color: hsl(0, 11%, 93%);
     width: 70%;
 }
 
 #main__profilePicture{
+    margin: 30px;
     top: 150px;
-    right: 700px;                                 
+    right: 200px;                                 
 }
 
 #main__exampleText{
-    top: 275px;
-    right: 200px;
-    font-size: 50px;
+    display: flex;
 }
 
-.main__btn__text{
-    top: 400px;
-    right: 389px;
-    font-size: 30px;
+#main__profilePicture {
+    width: 35%;
 }
+
+.myAccount__btns {
+    display: inline-block;
+    width: 65%;
+}
+/* 
+#main__btn1{
+    margin-top: ;
+    right: ;
+}
+#main__btn2{
+    top:;
+    right: ;
+}
+#main__btn3{
+    top:;
+    right: ;
+}
+#main__btn4{
+    top:;
+    right: ;
+} */
