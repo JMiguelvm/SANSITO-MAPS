@@ -1,0 +1,56 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#favorite__list {
+    margin: 0 auto;
+    width: 800px;
+    padding: 10px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.favoritos {
+    list-style: none;
+}
+
+.favorito__item {
+    display: flex;
+    height: 290px;
+    width: 700px;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 10px;
+}
+
+.favorito__item > img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 35%;
+}
+
+.favoritos-info {
+    margin-left: 20px;
+    width: 65%;
+}
+
+.favoritos-btn {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.favoritos-btn:hover {
+    background-color: #ddd;
+}
+
+#favoritos-btn-carrito:hover {
+    background-color: #b5fdb4;
+}

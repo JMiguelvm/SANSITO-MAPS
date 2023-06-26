@@ -3,23 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-    <title>Favoritos</title>
+    <title>Sansito_Maps-Favoritos</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-    <div class="favorite_item">
-        <h2>Tus Favoritos</h2>
-        <ul
-            class="favoritos-lista">
+    <div id="favorite__list">
+        <h2>Tus favoritos </h2>
+        <ul class= "favoritos">
             <li>
-                <a href="producto1.html">
-                    <img src="producto1.jpg" alt="producto 1">
-        
-                </a>
+                <div class="favorito__item">
+                    <img src="https://picsum.photos/300/300.jpg" alt="Producto 1" width="250" height="250">
+                    <div class="favoritos-info">
+                        <h3 class= "favoritos-nombre">Producto 1</h3>
+                        <p class="favoritos-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corporis sequi doloremque repudiandae quae illum dignissimos voluptate, adipisci perspiciatis provident. Iste expedita inventore voluptas esse accusamus provident, maxime recusandae facere?</p>
+                        <button class="favoritos-btn">Eliminar</button>
+                        <button id="favoritos-btn-carrito" class="favoritos-btn">Agregar al carrito</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="favorito__item">
+                    <img src="https://picsum.photos/300/301.jpg" alt="producto 2" width="250" height="250">
+                    <div class="favoritos-info">
+                        <h3 class= "favoritos-nombre">Producto 1</h3>
+                        <p class="favoritos-descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque a at quos quasi molestiae praesentium aliquam? Fugiat modi minima eaque quo aliquid quos dignissimos expedita iusto? Sequi animi quae minima!</p>
+                        <button class="favoritos-btn">Eliminar</button>
+                        <button id="favoritos-btn-carrito" class="favoritos-btn">Agregar al carrito</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="favorito__item">
+                    <img src="https://picsum.photos/300/302.jpg" alt="producto 3" width="250" height="250">
+                    <div class="favoritos-info">
+                        <h3 class= "favoritos-nombre">Producto 3</h3>
+                        <p class="favoritos-descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque a at quos quasi molestiae praesentium aliquam? Fugiat modi minima eaque quo aliquid quos dignissimos expedita iusto? Sequi animi quae minima!</p>
+                        <button class="favoritos-btn">Eliminar</button>
+                        <button id="favoritos-btn-carrito" class="favoritos-btn">Agregar al carrito</button>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
-    
 </body>
 </html>
