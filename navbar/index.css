@@ -81,3 +81,6 @@
     cursor: pointer;
 }
 
+.searchBar > button > i {
+    font-size: 18px;
+}
