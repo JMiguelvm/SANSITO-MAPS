@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="product__container">
+        <div id="product__images">
+            <div class="image__container">
+              <img id="product__image1" onclick="changeImg('https://picsum.photos/400/400.jpg')" class="product__image" src="https://picsum.photos/400/400.jpg" width="80" height="80">
+              <div class="overlay"></div>
+            </div>
+            <div class="image__container">
+              <img id="product__image2" onclick="changeImg('https://picsum.photos/401/400.jpg')" class="product__image" src="https://picsum.photos/401/400.jpg" width="80" height="80">
+              <div class="overlay"></div>
+            </div>
+            <div class="image__container">
+              <img id="product__image3" onclick="changeImg('https://picsum.photos/402/400.jpg')" class="product__image" src="https://picsum.photos/402/400.jpg" width="80" height="80">
+              <div class="overlay"></div>
+            </div>
+            <img id="product__mainImage" class="product__mainImage" src="https://picsum.photos/400/400.jpg" width="400" height="400">
+          </div>          
+        <div id="product__attributes">
+            <h2 id="product__name">Nombre del producto</h2>
+            <div class="rating clearfix">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5"></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4"></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3"></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2"></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1"></label>
+            </div>
+            <p id="product__description">Descripción del producto - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptatum, non deserunt natus molestias rerum obcaecati eum odio necessitatibus similique pariatur assumenda itaque alias placeat beatae debitis recusandae iure fuga!
+            Doloribus unde officia enim maiores consequatur deserunt temporibus quia nisi et magnam, quidem quae, dolor dolorem beatae aliquid ab a incidunt. Quisquam, incidunt eum. Velit consectetur facilis voluptates laboriosam rerum.</p>
+            <p id="product__price">Precio: $99.99</p>
+            <div id="product__stock">
+                <p class="product__stock__item">Cantidad:</p>
+                <select class="product__stock__item">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="more">Más de 5 unidades</option>
+                </select>
+                <p class="product__stock__item" id="product__stock__number">10 disponibles</p>
+            </div>
+            <div id="product__buttons">
+                <button>Agregar a favoritos</button>
+                <button>Marcar en el mapa</button>
+            </div>
+        </div>
+        <div id="product__description">
+
+        </div>
+    </div>
+    
+</body>
+</html>
