@@ -3,8 +3,6 @@
 
   <div class="product-container">
   <?php
-    $cartCount = [];
-
     $sql = "SELECT `name`, `img_url`, `supplier_id`, `rating`, `price` FROM productos";
     $result = $conn->query($sql);
 
@@ -27,5 +25,6 @@
                 </div>';
         }
     }
+    $conn->close();
 ?>     
   </div>

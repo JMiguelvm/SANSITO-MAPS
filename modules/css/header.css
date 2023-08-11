@@ -46,14 +46,6 @@
     cursor: pointer;
 }
 
-#userAccess > i {
-     color: white;
-}
-
-#userAccess:hover {
-    transition: 0.3s;
-    background: #b30f12;
-}
 
 #searchText {
     padding: 5px;
@@ -82,4 +74,44 @@
 
 .searchBar > button > i {
     font-size: 18px;
+}
+
+.buttons > button {
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 0.5em;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.buttons {
+    margin-left: 50px;
+    height: 30px;
+    margin: auto 0;
+    margin-right: 20px;
+    justify-self: right;
+}
+
+#bLog {
+    background-color: #F9CE3A;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#bLog:hover {
+    background-color: #e4bc3a;
+}
+
+#bReg {
+    background-color: #2F2F35;
+    color: white;
+    width: 130px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#bReg:hover {
+    background-color: #494952;
 }
