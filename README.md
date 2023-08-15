@@ -36,7 +36,6 @@ Desarrollar una aplicación y/o web para dar un enfoque digital a las plazas com
 1. Pestaña de Administración de Productos (Jose)
 2. Pestaña de Agregar Producto-Pestaña de Editar Producto (Samuel)
 3. Pestaña de Promociones y Descuentos (mijail)
-4. Pestaña de Estadísticas de Ventas (cris)
 5. Pestaña de Gestión de Pedidos (mijail)
 6. Pestaña de Configuración de Pagos (cris)
 
