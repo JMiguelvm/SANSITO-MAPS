@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: 'Want Coffe';
+    src: url('resources/Want\ Coffee.ttf') format('truetype');
+}
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 70px;
+    background-color: #CA1214;
+}
+
+.searchBar {
+    margin: auto 0;
+    margin-left: 15px;
+    display: inline-block;
+    grid-column: span 1;
+}
+
+#sansitoMaps {
+    margin: auto 0;
+    text-align: center;
+    display: inline-block;
+    font-size: 40px;
+    font-family:'Want Coffe', sans-serif;
+    color: #F9CE3A;
+    grid-column: span 1;
+}
+
+#userAccess {
+    margin: auto 0;
+    width: 70px;
+    height: 70px;
+    background: none;
+    justify-self: end;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#userAccess > i {
+     color: white;
+}
+
+#userAccess:hover {
+    transition: 0.3s;
+    background: #b30f12;
+}
+
+#searchText {
+    padding: 5px;
+    height: 30px;
+    border: none;
+    background-color: #b30f12;
+    border-radius: 0.5em;
+    font-size: 15px;
+    font-weight: blod;
+    font-weight: bold;
+}
+
+#searchText::placeholder {
+    color: rgb(214, 214, 214);
+}
+
+.searchBar > button {
+    width: 20px;
+    height: 20px;
+    color: white;
+    background: none;
+    justify-self: end;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.searchBar > button > i {
+    font-size: 18px;
+}
+
+.myAccount {
+    padding-top: 70px;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    background-color: hsl(0, 11%, 93%);
+}
+
+.myAccount__side{
+    padding-top: 50px;
+    height: 100%;
+    display: inline-block;
+    background-color: #DFDFDF;
+    width: 30%;
+}
+
+.myAccount__main{
+    padding-top: 100px;
+    height: 460px;
+    background-color: hsl(0, 11%, 93%);
+    width: 400px;
+    margin: 0 auto;
+}
+
+#main__profilePicture{
+    margin: auto 0;
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+    display: inline-block; 
+    font-size:70px;
+    border: 2px solid rgb(75, 117, 255);
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+#main__profilePicture > img {
+    width: 100%;
+    height: 100%;
+}
+
+.main__namePhoto{
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; 
+    top: 50px;
+    left: 450px;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(20, 20, 20, 0.1);
+    padding: 20px;
+    border-radius: 17px;
+}
+
+#main__exampleTxt{
+    top: 20px;
+    left: 130px;
+    display: inline-block;
+    padding: 30px;  
+}
+
+.main__btns{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    padding: 20px;
+    border-radius: 17px;
+    width: 510px;
+    margin: 0 auto;
+    backdrop-filter: blur(5.5px);
+}
+
+.btns__ulStyle{
+    list-style: none;
+    border: none;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+
+.btns__style{
+    margin-bottom: 30px;
+    margin-left: 5px;
+}
+
+.btns__style__link{
+    text-decoration: none;
+    color: rgb(14, 14, 14);
+    width: 100px;
+}
+
+.link__container{
+    width: 200px;
+}
+
+.btns__img{
+    font-size:30px;
+    border: 2px solid rgb(75, 117, 255);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.btns__text{
+    width: 50px;
+}
+
+.side__button {
+    text-align: left;
+    display: block;
+    justify-content: left;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 40px;
+    
+}
+
+.side__button__text {
+    display: inline-block;
+}
+
+i {
+    font-size: 35px;
+}
