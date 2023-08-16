@@ -2,7 +2,7 @@
     include_once('sql/conexion.php');
 
     $NombreProducto = $_POST['NomProducto'];
-    $ImagenProducto = $_FILES['FotoProducto'];
+    $ImagenProducto = $_POST['FotoProducto'];
     $Descripcion = $_POST['descripcionProducto'];
     $Precio = $_POST['PrecioProducto'];
     $Categoria = $_POST['categoria'];

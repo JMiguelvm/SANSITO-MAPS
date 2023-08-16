@@ -8,6 +8,19 @@ if (isset($_SESSION['usuario'])) {
         <div class="searchBar">
             <input type="text" id="searchText" placeholder="Buscar...">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <a onclick="vercategorias()">Ver Categorías</a>
+        </div>
+        <script>
+            function vercategorias()
+            {
+                document.getElementById("vercategorias").style.display= block;
+            }
+        </script>
+        <div id="vercategorias">
+            <form>
+                <h1>Hola chavales</h1>
+
+            </form>
         </div>
         <p id="sansitoMaps">SANSITO-MAPS</p>
         <div id="user_panel">

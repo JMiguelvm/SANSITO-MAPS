@@ -2,7 +2,7 @@
 <body>
     <form method="post" action="agregarproducto.php">
         <tr><td>Nombre del producto<input type="text" name="NomProducto"></td></tr>
-        <tr><td>imagen del producto <input type="file" name="FotoProducto"></td></tr>
+        <tr><td>imagen del producto <input type="url" name="FotoProducto"></td></tr>
         <tr><td>Descripcion del producto <textarea name="descripcionProducto"></textarea></td></tr>
         <tr><td>Precio del producto <input type="number" name="PrecioProducto"></td></tr>
         <tr><td>

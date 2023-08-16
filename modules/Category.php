@@ -1,44 +1,34 @@
-
-<div class="sidebar">
-        <h2>Categorías</h2><br>
-        <ul>
-            <li><a href="#">Calzado</a></li>
-            <li><a href="#">Tecnologia</a></li>
-            <li><a href="#">Ropa</a></li>
-
-        </ul>
-</div>
-<div class="content">
-    <?php
-        $categorias = array();
-
-        $query = "SELECT id, nombre FROM categorias";
-        $resultado = $conexion->query($query);
-
-        if ($resultado->num_rows > 0) {
-            while ($fila = $resultado->fetch_assoc()) {
-                $categorias[] = $fila;
-            }
-        }
-
-        $usuario = mysqli_query($conexion, "SELECT * FROM productos ORDER BY categoria asc")
-        while ($mostrar = mysqli_fetch_array($usuario))
+<?php
+        
+        
+        $categoria = $_POST['categoriaaa'];
+        if($categoria=="value='ropa'")
         {
-            echo '<div class="product">
-                    <div class="product-inner">
-                    <div class="product-image">
-                        <img src="' . $row["imagen_producto"] . '" alt="' . $row["nombre_producto"] . '">
-                    </div>
-                    <h2 class="product-name">' . $row["nombre_producto"] . '</h2>
-                    <h4 class="product-provider">Proveedor ID #</h4>
-                    <div class="product-rating">
-                        <span class="stars">&#9733; -.-</span>
-                    </div>
-                    <p class="product-pr  8 = [1,2,3] ice">$' . $row["precio"] . ' COP</p>
-                    <button class="product-buy">Comprar</button>
-                    <button class="product-cart">Añadir al carrito</button>
-                    </div>
-                </div>';
+            $querycategoria = mysqli_query($conn, "SELECT * FROM categorias ORDER BY nombre_categoria");
         }
-    ?>
-</div>
+        echo '
+        <div class="cart__product">
+        <div id="product__img">
+            <img src="'.$row["img_url"].'" width="200" height="200" id="item__img">
+        </div>
+        <div id="product__content">
+            <h3 id="product__content__name" class="product__content__item">'.$row["name"].'</h3>
+            <span id="product__content__price" class="product__content__item">$'.$row["price"].'</span>
+            <span id="product__content__status" class="product__content__item">Disponible</span>
+            <div id="product__content__count" class="product__content__item">
+                <span>Cantidad:</span>
+                <select name="" id="product__content__count--select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="more">Más de 5 unidades</option>
+                </select>
+            </div>
+            <button class="product__content__button  product__content__item">Eliminar</button>
+            <button class="product__content__button  product__content__item">Guardar para más tarde</button>
+        </div>
+        </div>
+        ';
+?>

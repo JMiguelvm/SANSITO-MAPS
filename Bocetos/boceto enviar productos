@@ -1,0 +1,3 @@
+<div>
+<img scr='.$ImagenProducto.' alt='.$NombreProducto.'>
+</div>
