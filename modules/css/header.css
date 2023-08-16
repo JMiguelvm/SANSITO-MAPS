@@ -308,3 +308,9 @@
 #register__submit:hover {
     background-color: #e9bf36;
 }
+
+footer {
+    position: fixed;
+    
+    background-color:  #2F2F35;
+}

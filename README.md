@@ -15,7 +15,6 @@ Desarrollar una aplicación y/o web para dar un enfoque digital a las plazas com
 - Especificar qué productos exactamente se pueden encontrar en dichas plazas comerciales.
 - Expandir este mercado a otro publico.
 
-
 ## Por hacer — Pestañas generales/de usuario
 1. Pestaña de Inicio (Jose)
 2. Pestaña de Búsqueda (mijail)
@@ -41,5 +40,3 @@ Desarrollar una aplicación y/o web para dar un enfoque digital a las plazas com
 6. Pestaña de Estadísticas de Ventas (cris)
 7. Pestaña de Gestión de Pedidos (mijail)
 8. Pestaña de Configuración de Pagos (cris)
-
-

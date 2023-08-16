@@ -1,13 +1,29 @@
 
-<div id="search-results"></div>
+<div class="sidebar">
+        <h2>Categorías</h2><br>
+        <ul>
+            <li><a href="#">Calzado</a></li>
+            <li><a href="#">Tecnologia</a></li>
+            <li><a href="#">Ropa</a></li>
 
-  <div class="product-container">
-  <?php
-    $sql = "SELECT `nombre_producto`, `imagen_producto`, `precio` FROM productos";
-    $result = $conn->query($sql);
+        </ul>
+</div>
+<div class="content">
+    <?php
+        $categorias = array();
 
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
+        $query = "SELECT id, nombre FROM categorias";
+        $resultado = $conexion->query($query);
+
+        if ($resultado->num_rows > 0) {
+            while ($fila = $resultado->fetch_assoc()) {
+                $categorias[] = $fila;
+            }
+        }
+
+        $usuario = mysqli_query($conexion, "SELECT * FROM productos ORDER BY categoria asc")
+        while ($mostrar = mysqli_fetch_array($usuario))
+        {
             echo '<div class="product">
                     <div class="product-inner">
                     <div class="product-image">
@@ -24,7 +40,5 @@
                     </div>
                 </div>';
         }
-    }
-    $conn->close();
-?>     
-  </div>
+    ?>
+</div>
