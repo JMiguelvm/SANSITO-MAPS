@@ -33,6 +33,7 @@
     font-family:'Want Coffe', sans-serif;
     color: #F9CE3A;
     grid-column: span 1;
+    text-decoration: none;
 }
 
 #userAccess {
