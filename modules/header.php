@@ -9,7 +9,7 @@ if (isset($_SESSION['usuario'])) {
             <input type="text" id="searchText" placeholder="Buscar...">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <p id="sansitoMaps">SANSITO-MAPS</p>
+        <a href="/SANSITO-MAPS" id="sansitoMaps">SANSITO-MAPS</a>
         <div id="user_panel">
             <div>
                 <input type="checkbox" id="visible_ul"></input>
@@ -36,7 +36,7 @@ else {
             <input type="text" id="searchText" placeholder="Buscar...">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <p id="sansitoMaps">SANSITO-MAPS</p>
+        <a href="/SANSITO-MAPS" id="sansitoMaps">SANSITO-MAPS</a>
         <div class="buttons">
             <button onclick="openLogin()" id="bLog">Iniciar sesión</button>
             <button onclick="openRegister()" id="bReg">Registrarse</button>

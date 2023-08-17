@@ -3,7 +3,7 @@
 
   <div class="product-container">
   <?php
-    $sql = "SELECT `nombre_producto`, `imagen_producto`, `precio` FROM productos";
+    $sql = "SELECT `ID_producto`, `nombre_producto`, `imagen_producto`, `precio` FROM productos";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -11,7 +11,7 @@
             echo '<div class="product">
                     <div class="product-inner">
                     <div class="product-image">
-                        <img src="' . $row["imagen_producto"] . '" alt="' . $row["nombre_producto"] . '">
+                        <a href="product_details.php?productId=' . $row["ID_producto"] .'"><img src="' . $row["imagen_producto"] . '" alt="' . $row["nombre_producto"] . '"></a>
                     </div>
                     <h2 class="product-name">' . $row["nombre_producto"] . '</h2>
                     <h4 class="product-provider">Proveedor ID #</h4>
