@@ -6,21 +6,9 @@ if (isset($_SESSION['usuario'])) {
     <header>
     <div class="navBar">
         <div class="searchBar">
+        <button id="categoriasBtn"><i class="fas fa-bars"></i></button>
             <input type="text" id="searchText" placeholder="Buscar...">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            <a onclick="vercategorias()">Ver Categorías</a>
-        </div>
-        <script>
-            function vercategorias()
-            {
-                document.getElementById("vercategorias").style.display= block;
-            }
-        </script>
-        <div id="vercategorias">
-            <form>
-                <h1>Hola chavales</h1>
-
-            </form>
         </div>
         <a href="/SANSITO-MAPS" id="sansitoMaps">SANSITO-MAPS</a>
         <div id="user_panel">
