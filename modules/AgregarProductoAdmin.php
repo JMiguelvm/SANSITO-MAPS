@@ -1,6 +1,6 @@
 
 <body>
-    <form method="post" action="agregarproducto.php">
+    <form method="post" action="sql/agregarproducto.php">
         <tr><td>Nombre del producto<input type="text" name="NomProducto"></td></tr>
         <tr><td>imagen del producto <input type="url" name="FotoProducto"></td></tr>
         <tr><td>Descripcion del producto <textarea name="descripcionProducto"></textarea></td></tr>
