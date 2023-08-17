@@ -138,8 +138,12 @@
     margin-bottom: 20px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 30px rgba(20, 20, 20, 0.1);
-    padding: 20px;
+    padding: 30px;
     border-radius: 17px;
+}
+
+#namePhoto__user{
+    font-size: 50px;
 }
 
 #main__exampleTxt{
@@ -192,7 +196,7 @@
 }
 
 .btns__text{
-    width: 50px;
+    width: 1000px;
 }
 
 .side__button {
