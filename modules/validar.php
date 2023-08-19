@@ -58,7 +58,7 @@ switch($option) {
         else {
             $_SESSION['cartCount'][] = $productId;
         }
-        header("Location: ../index.php");
+        header("Location: ../?notification=1");
         exit();
     break;
 }

@@ -120,15 +120,3 @@
      ';
  }
 ?>
-
-
-
-<div id="notification">
-    <div id="notification__text">
-        <h4>Error</h4>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim sint maiores.</p>
-    </div>
-    <div id="notification__icon">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
-</div>

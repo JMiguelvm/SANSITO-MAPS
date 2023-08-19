@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="modules/css/header.css">
+    <link rel="stylesheet" href="modules/css/header1.css">
     <link rel="stylesheet" href="modules/css/product.css">
     <link rel="stylesheet" href="modules/categoria/category.css">
 
@@ -17,6 +17,7 @@
             include('modules/header.php');
             include('modules/products.php');
             include('modules/categoria/category.php');
+            include('modules/notification.php');
         ?>
     </div>
     <?php
