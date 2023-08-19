@@ -49,6 +49,18 @@ switch($option) {
         header("Location: ../index.php");
         exit();
     break;
+    case 4: // Agregar producto a carrito
+        $productId = $_POST['productId'];
+        session_start();
+        if (!isset($_SESSION['cartCount'])) {
+            $_SESSION['cartCount'] = array($productId);
+        }
+        else {
+            $_SESSION['cartCount'][] = $productId;
+        }
+        header("Location: ../index.php");
+        exit();
+    break;
 }
 
 ?>

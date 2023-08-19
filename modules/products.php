@@ -20,7 +20,9 @@
                     </div>
                     <p class="product-pr  8 = [1,2,3] ice">$' . $row["precio"] . ' COP</p>
                     <button class="product-buy">Comprar</button>
-                    <button class="product-cart">Añadir al carrito</button>
+                    <form action="modules/validar.php?option=4" method="post">
+                        <button name="productId" value="' . $row["ID_producto"] .'"type="submit" class="product-cart">Añadir al carrito</button>
+                    </form>      
                     </div>
                 </div>';
         }

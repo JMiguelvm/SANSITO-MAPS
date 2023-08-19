@@ -2,11 +2,29 @@
     margin: 0px;
     box-sizing: border-box;
     outline: none;
+    font-family: sans-serif;
 }
 
 @font-face {
     font-family: 'Want Coffe';
     src: url('../resources/WantCoffee.ttf') format('truetype');
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body > div {
+    flex: 1;
+    
 }
 
 .navBar {
@@ -118,10 +136,12 @@
 }
 
 #user_panel {
-    margin-left: 50px;
     margin: auto 0;
+    /*width: 100px;    CONSULTAR header.php, está ADJUNTO a un condicional*/ 
     margin-right: 10px;
     justify-self: right;
+    display: flex;
+    align-items: center;
 }
 
 #user_panel > div > button {
@@ -137,10 +157,9 @@
     color: #F9CE3A;
 }
 
-#user_panel > div  {
-    width: 100%;
-    justify-content: right;
-    display: flex;
+#user__panel__icon {
+    width: 40px;
+    display: inline-block;
 }
 
 #ulCont {
@@ -192,6 +211,31 @@
 
 #user_panel input:hover {
     color: #F9CE3A;
+}
+
+#cart {
+    color: white;
+    margin-right: 5px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+#cart p{
+    display: inline-block;
+    animation: anim1 .5s;
+}
+
+#cart i {
+    animation: anim1 .5s;
+}
+
+@keyframes anim1 {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 #log_cont {
@@ -311,7 +355,86 @@
 }
 
 footer {
-    position: fixed;
-    
+    height: 300px;
+    width: 100%;
     background-color:  #2F2F35;
+    font-family: sans-serif;
+    color: white;
 }
+
+footer > div {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    margin-top: 50px;
+}
+
+#footer__content > p {
+    font-size: 25px;
+}
+
+#footer__content {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+footer i {
+    padding-right: 5px;
+}
+
+footer img {
+    display: inline-block;
+}
+
+.footer_title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#sop_mail {
+    width: 220px;
+}
+
+#sop_tel {
+    width: 110px;
+}
+
+#notification {
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    width: 350px;
+    height: 120px;
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    /* transform: translateX(-400px);
+    animation: notificationPush 2s; */
+}
+
+#notification__text {
+    display: inline-block;
+    width: 240px;
+}
+
+#notification__icon {
+    display: inline-block;
+    width: 60px;
+    font-size: 50px;
+}
+
+#notification__icon  i {
+    margin-left: 10px;
+}
+
+/* @keyframes notificationPush {
+    0%, 100% {
+        transform: translateX(-400px);
+    }
+    25%, 75% {
+        transform: translateX(0);
+    }
+} */
