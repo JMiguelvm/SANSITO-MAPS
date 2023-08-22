@@ -43,7 +43,7 @@
                 <ul id="ulCont">
                     <li><a href=""><i class="fa-solid fa-wrench"></i> Configuración</a></li>
                     <li><a href=""><i class="fa-solid fa-box"></i> Pedidos</a></li>
-                    <li><a href="modules/validar.php?option=3"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
+                    <li><a href="/modules/validar.php?option=3"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
                 </ul>
             </div>        
         </div>
@@ -69,7 +69,7 @@
  </header>
  <div id="log_cont">
      <div id="login">
-         <form action="modules/validar.php?option=1" method="post">
+         <form action="/SANSITO-MAPS/modules/validar.php?option=1" method="post">
              <h3>Login</h3>
              <input type="text" name="logMail" id="logMail" placeholder="Correo" required>
              <input type="password" name="logContraseña" id="logContraseña" placeholder="Contraseña" required>
@@ -80,7 +80,7 @@
          </form>
      </div>
      <div id="register">
-         <form action="modules/validar.php?option=2" method="post">
+         <form action="/SANSITO-MAPS/modules/validar.php?option=2" method="post">
              <h3>Registro</h3>
              <input type="text" name="regNombre" placeholder="Nombre(s)" required>
              <input type="text" name="regApellido" placeholder="Apellidos" required>
