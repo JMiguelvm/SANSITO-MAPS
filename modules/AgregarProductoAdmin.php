@@ -1,17 +1,25 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body>
     <form method="post" action="sql/agregarproducto.php">
-        <tr><td>Nombre del producto<input type="text" name="NomProducto"></td></tr>
-        <tr><td>imagen del producto <input type="url" name="FotoProducto"></td></tr>
-        <tr><td>Descripcion del producto <textarea name="descripcionProducto"></textarea></td></tr>
-        <tr><td>Precio del producto <input type="number" name="PrecioProducto"></td></tr>
-        <tr><td>
-            <div>
-                <tr><td><input type="radio" name="categoria" value="ropa">Ropa</td></tr>
-                <tr><td><input type="radio" name="categoria" value="calzado">Calzado</td></tr>
-                <tr><td><input type="radio" name="categoria" value="tecnologia">Tecnologia</td></tr>
-                <tr><td><input type="radio" name="categoria" value="belleza">Belleza</td></tr>
+        <div class="add-product">
+            <div class="add-product__block">
+                <p class="add-product__item">
+                    Nombre del producto<input type="text" name="NomProducto" class="add-product__input">
+                </p>
+                <p class="add-product__item">
+                    imagen del producto <input type="url" name="FotoProducto" class="add-product__input">
+                </p>
+                <p class="add-product__item">
+                    Descripcion del producto <textarea name="descripcionProducto" class="add-product__textarea"></textarea>
+                </p>
             </div>
+<<<<<<< HEAD
         </td></tr>
         <tr><td>Stock disponible <input type="number" name="stock"></td></tr>
         <tr><td>Descuento (NÚMERO)<input type="text" name="descuento"></td></tr>
@@ -19,4 +27,30 @@
             <td><button type="submit">P.ublicar producto</button></td>
         </tr>
     </form> 
+=======
+            <p class="add-product__item">
+                Precio del producto <input type="number" name="PrecioProducto" class="add-product__input">
+            </p>
+            <p class="add-product__item">
+                <div class="add-product__category">
+                    <p class="add-product__radio"><input type="radio" name="categoria" value="ropa">Ropa</p>
+                    <p class="add-product__radio"><input type="radio" name="categoria" value="calzado">Calzado</p>
+                    <p class="add-product__radio"><input type="radio" name="categoria" value="tecnologia">Tecnologia</p>
+                    <p class="add-product__radio"><input type="radio" name="categoria" value="belleza">Belleza</p>
+                </div>
+            </p>
+            <p class="add-product__item">
+                Stock disponible <input type="number" name="stock" class="add-product__input">
+            </p>
+            <p class="add-product__item">
+                Descuento (NÚMERO)<input type="text" name="descuento" class="add-product__input">
+            </p>
+            <p class="add-product__item">
+                <button type="submit" class="add-product__button">A</button>
+            </p>
+        </div>
+    </form>
+>>>>>>> 15e119ce31eed37b1f76b05152f660e0fccbec33
 </body>
+
+</html>
