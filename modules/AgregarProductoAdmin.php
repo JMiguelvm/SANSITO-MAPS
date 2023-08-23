@@ -16,7 +16,7 @@
         <tr><td>Stock disponible <input type="number" name="stock"></td></tr>
         <tr><td>Descuento (NÚMERO)<input type="text" name="descuento"></td></tr>
         <tr>
-            <td><button type="submit">A</button></td>
+            <td><button type="submit">P.ublicar producto</button></td>
         </tr>
-    </form>
+    </form> 
 </body>
