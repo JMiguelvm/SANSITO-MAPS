@@ -43,7 +43,7 @@
                 <ul id="ulCont">
                     <li><a href=""><i class="fa-solid fa-wrench"></i> Configuración</a></li>
                     <li><a href=""><i class="fa-solid fa-box"></i> Pedidos</a></li>
-                    <li><a href="/modules/validar.php?option=3"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
+                    <li><a href="/SANSITO-MAPS/modules/validar.php?option=3"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
                 </ul>
             </div>        
         </div>
