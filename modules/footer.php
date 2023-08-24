@@ -1,6 +1,6 @@
 <footer>
     <div>
-    <img src="modules/img/logo.png" alt="logo" width="200px" height="200px">
+    <img src="/SANSITO-MAPS/modules/img/logo.png" alt="logo" width="200px" height="200px">
         <div id="footer__content">
             <p  class="footer_title">Soporte</p>
             <div id="sop_mail">

@@ -27,3 +27,52 @@ $categoria
         </form>
 
         <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+                
+                            <?php
+                                $conexion = new mysqli("localhost", "root", "", "san");
+
+                                $palabraClave = $_GET["palabra_clave"];
+                                $categoria = $_GET["categoria"];
+
+                                $query = "SELECT `nombre_producto`, `precio` , `categoria` FROM productos";
+
+
+                                $resultado = $conexion->query($query);
+                            ?>
+
+
+                            <table>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Categoría</th>
+                                </tr>
+                                <?php while ($f = $resultado->fetch_assoc()) { ?>
+                                <tr class="producto">
+                                <tr>
+                                    <td><?php echo $f["nombre_producto"]; ?></td>
+                                    <td><?php echo $f["precio"]; ?></td>
+                                    <td><?php echo $f["categoria"]; ?></td>
+                                </tr>
+
+                                <?php } ?>
+                            </table>
+
+                            <?php
+                            $conexion->close();
+                            ?>
+
+
+
+
+        

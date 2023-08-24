@@ -213,19 +213,19 @@ body > div {
     color: #F9CE3A;
 }
 
-#cart {
+#cartIcon {
     color: white;
     margin-right: 5px;
     font-size: 20px;
     display: inline-block;
 }
 
-#cart p{
+#cartIcon p{
     display: inline-block;
     animation: anim1 .5s;
 }
 
-#cart i {
+#cartIcon i {
     animation: anim1 .5s;
 }
 

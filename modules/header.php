@@ -15,9 +15,9 @@
                 ';
             if (isset($_SESSION['cartCount'])) {
                 echo '
-                <div id="cart">
+                <div id="cartIcon">
                     <p>'.count($_SESSION['cartCount']).'</p>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="/SANSITO-MAPS/modules/cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
                 <style>
                     #user_panel {
@@ -120,3 +120,5 @@
      ';
  }
 ?>
+
+
