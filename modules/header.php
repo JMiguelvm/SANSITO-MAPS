@@ -3,16 +3,16 @@
 
  if (isset($_SESSION['usuario'])) {
      echo '
-     <header>
-    <div class="navBar">
-        <div class="searchBar">
-        <button id="categoriasBtn"><i class="fas fa-bars"></i></button>
-            <input type="text" id="searchText" placeholder="Buscar...">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-        <a href="/SANSITO-MAPS" id="sansitoMaps">SANSITO-MAPS</a>
-        <div id="user_panel">
-            ';
+        <header>
+        <div class="navBar">
+            <div class="searchBar">
+            <button id="categoriasBtn"><i class="fas fa-bars"></i></button>
+                <input type="text" id="searchText" placeholder="Buscar...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <a href="/SANSITO-MAPS" id="sansitoMaps">SANSITO-MAPS</a>
+            <div id="user_panel">
+                ';
             if (isset($_SESSION['cartCount'])) {
                 echo '
                 <div id="cart">
@@ -41,7 +41,7 @@
                 <label id="usericon" for="visible_ul" class="fa-solid fa-circle-user">         
                 </label>
                 <ul id="ulCont">
-                    <li><a href=""><i class="fa-solid fa-wrench"></i> Configuración</a></li>
+                    <li><a href="/SANSITO-MAPS/Bocetos/MiCuentaV2/index.php"><i class="fa-solid fa-wrench"></i> Configuración</a></li>
                     <li><a href=""><i class="fa-solid fa-box"></i> Pedidos</a></li>
                     <li><a href="/SANSITO-MAPS/modules/validar.php?option=3"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
                 </ul>

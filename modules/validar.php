@@ -53,7 +53,7 @@ switch($option) {
             header("Location: ../index.php");
         }
     break;
-    case 3: // Cerrar sesión
+    case 3: //Cerrar sesión
         session_start();
         session_destroy();
         header("Location: ../index.php");

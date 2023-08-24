@@ -27,7 +27,7 @@
             <div class="container__name">
                 <button id="btn__nombre" class="container-button">Nombre</button>
                 <form id="form__nombre" style="display: none;">
-                    <input type="text" name="nameTusDatos">
+                    <input placeholder="Nombre" type="text" name="nameTusDatos">
                     <button type="submit">Enviar</button>
                     <button onclick="cerrarForm(form__nombre);">Cerrar</button>
                 </form>
@@ -35,7 +35,7 @@
             <div class="container__number">
             <button id="btn__numContact" class="container-button">Número de contacto</button>
             <form id="form__numContact" style="display: none;">
-                    <input type="text" name="numContactTusDatos">
+                    <input placeholder="Número" type="text" name="numContactTusDatos">
                     <button type="submit">Enviar</button>
                     <button onclick="cerrarForm(form__numContact);">Cerrar</button>
                 </form>
@@ -43,7 +43,7 @@
             <div class="container__email">
             <button id="btn__email" class="container-button">Email</button>
             <form id="form__email" style="display: none;">
-                    <input type="text" name="emailTusDatos">
+                    <input placeholder="Email" type="text" name="emailTusDatos">
                     <button type="submit">Enviar</button>
                     <button onclick="cerrarForm(form__email);">Cerrar</button>
                 </form>
@@ -51,16 +51,6 @@
         </div>
     </div>
     <script>
-        function openForm(option){
-            switch(option){
-                case 0:
-                    document.getElementById('form__nombre').style.display="block";
-                break;
-                case 1:
-                    document.getElementById('form__numContact').style.display="block";
-                break;
-            }
-        }
 
         function cerrarForm(form) {
             form.style.display = "none";
