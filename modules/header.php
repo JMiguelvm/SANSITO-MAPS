@@ -15,9 +15,9 @@
             ';
             if (isset($_SESSION['cartCount'])) {
                 echo '
-                <div id="cart">
+                <div id="cartIcon">
                     <p>'.count($_SESSION['cartCount']).'</p>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="/SANSITO-MAPS/modules/cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
                 <style>
                     #user_panel {
@@ -43,7 +43,7 @@
                 <ul id="ulCont">
                     <li><a href=""><i class="fa-solid fa-wrench"></i> Configuración</a></li>
                     <li><a href=""><i class="fa-solid fa-box"></i> Pedidos</a></li>
-                    <li><a href="/modules/validar.php?option=3"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
+                    <li><a href="/SANSITO-MAPS/modules/validar.php?option=3"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
                 </ul>
             </div>        
         </div>
@@ -120,3 +120,5 @@
      ';
  }
 ?>
+
+

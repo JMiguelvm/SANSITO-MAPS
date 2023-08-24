@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/header1.css">
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cart1.css">
+    <link rel="stylesheet" href="categoria/category.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
     <title>Document</title>
@@ -19,14 +20,11 @@
     <div id="cart">
         <?php
             $cartCount = [];
-
-            $sql = "SELECT `ID_producto`, `nombre_producto`, `imagen_producto`, `precio` FROM productos";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    array_push($cartCount, $row["ID_producto"]);
-                    echo '
+            for ($i = 0; $i < count($_SESSION['cartCount']); $i++) {
+                $sql = "SELECT `ID_producto`, `nombre_producto`, `imagen_producto`, `precio` FROM productos WHERE ID_producto = ".$_SESSION['cartCount'][$i];
+                $result = $conn->query($sql);
+                $row = $result->fetch_assoc();
+                echo '
                     <div class="cart__product">
                         <div id="product__img">
                             <img src="'.$row["imagen_producto"].'" width="200" height="200" id="item__img">
@@ -51,8 +49,6 @@
                         </div>
                     </div>
                     ';
-                }
-                echo '<h1>'.implode(", ", $cartCount).'</h1>';
             }
             $conn->close();
         ?>

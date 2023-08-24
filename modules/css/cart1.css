@@ -71,7 +71,16 @@
 
 #product__content__price {
     font-size: 18px;
+    color: black;
     font-weight: 500;
+}
+
+#product__content__name {
+    color: black;
+}
+
+#product__content__count > span {
+    color: black;
 }
 
 #product__content__status {
