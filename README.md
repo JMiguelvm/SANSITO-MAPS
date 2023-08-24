@@ -23,7 +23,7 @@ Desarrollar una aplicación y/o web para dar un enfoque digital a las plazas com
 5. Pestaña de Carrito de Compras (Jose)
 6. Pestaña de Mi Cuenta (Samuel)
 7. Pestaña de Navegación en el Mapa (cris)
-8. Pestaña de Filtros de Búsqueda Avanzada
+8. Pestaña de Filtros de Búsqueda Avanzada (mijail)
 9. Pestaña de Soporte o Contacto (cris)
 10. Pestaña de Explorar Tiendas (Samuel)
 12. Pestaña de Favoritos(daniel)

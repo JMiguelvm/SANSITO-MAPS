@@ -19,6 +19,15 @@
                     Descripcion del producto <textarea name="descripcionProducto" class="add-product__textarea"></textarea>
                 </p>
             </div>
+<<<<<<< HEAD
+        </td></tr>
+        <tr><td>Stock disponible <input type="number" name="stock"></td></tr>
+        <tr><td>Descuento (NÚMERO)<input type="text" name="descuento"></td></tr>
+        <tr>
+            <td><button type="submit">P.ublicar producto</button></td>
+        </tr>
+    </form> 
+=======
             <p class="add-product__item">
                 Precio del producto <input type="number" name="PrecioProducto" class="add-product__input">
             </p>
@@ -41,6 +50,7 @@
             </p>
         </div>
     </form>
+>>>>>>> 15e119ce31eed37b1f76b05152f660e0fccbec33
 </body>
 
 </html>
