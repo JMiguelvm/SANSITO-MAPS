@@ -87,3 +87,59 @@
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     color: rgb(126, 204, 10);
 }
+
+#pagoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3 );
+}
+
+#pagoContainer img {
+    width: 50px;
+    height: 50px;
+}
+
+#pagoContainer form {
+    background-color: white;
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    top: 40%;
+    left: 36%;
+    margin: -25px 0 0 -25px;
+    padding: 20px;
+    border-radius: 0.5em;
+}
+
+#pagoContainer h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pago__option {
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#pago__direc {
+    text-align: center;
+}
+
+#pago__buttons {
+    margin: 10px;
+    text-align: center;
+}
+
+#pago__buttons button {
+    cursor: pointer;
+    width: 80px;
+    border-radius: 0.5em;
+    border: none;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1 );
+    font-size: 14px;
+    padding: 5px 0;
+}
