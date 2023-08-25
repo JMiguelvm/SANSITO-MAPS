@@ -20,8 +20,8 @@ Desarrollar una aplicación y/o web para dar un enfoque digital a las plazas com
 1. Pestaña de Inicio (Jose) ✔️
 2. Pestaña de Búsqueda (mijail) ✔️
 3. Pestaña de Categorías (mijail)
-4. Pestaña de Detalles del Producto (Jose)
-5. Pestaña de Carrito de Compras (Jose)
+4. Pestaña de Detalles del Producto (Jose) ✔️
+5. Pestaña de Carrito de Compras (Jose) ✔️
 6. Pestaña de Mi Cuenta (Samuel)
 7. Pestaña de Navegación en el Mapa (cris)
 8. Pestaña de Filtros de Búsqueda Avanzada (mijail)
