@@ -220,6 +220,11 @@ body > div {
     display: inline-block;
 }
 
+#cartIcon a {
+    text-decoration: none;
+    color: white;
+}
+
 #cartIcon p{
     display: inline-block;
     animation: anim1 .5s;
