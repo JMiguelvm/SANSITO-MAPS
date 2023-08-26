@@ -119,6 +119,27 @@
  </script>
      ';
  }
+
+ if (isset($_SESSION['admin'])) {
+    if ($_SESSION['admin'] == 1) {
+        echo '
+        <div id="admin">
+            <label for="adminIcon"><i class="fa-solid fa-user-gear"></i>Admin panel</label>
+            <input type="checkbox" name="adminIcon" id="adminIcon">
+            <div id="admin__options">
+                <h3>Administrar...</h6>
+                <ul>
+                    <li><a href="modules/admin/producto/lista.php">Productos</a></li>
+                    <li><a href="">Usuarios</a></li>
+                    <li><a href="">Categorias</a></li>
+                </ul>
+            </div>
+        </div>
+        ';
+     }
+ }
 ?>
+
+
 
 

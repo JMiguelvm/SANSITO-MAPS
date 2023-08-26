@@ -15,6 +15,9 @@ switch($option) {
         if ($mail == $user['correo']) {
             if ($password == $user['contrasena']) {
                 session_start();
+                if ($user['tipo_usuario'] == 2) {
+                    $_SESSION['admin'] = 1;
+                }
                 $_SESSION['usuario'] =  $user['ID_usuario'];
                 header("Location: /SANSITO-MAPS");
                 exit();
@@ -92,6 +95,29 @@ switch($option) {
             }
             header("Location: /SANSITO-MAPS");
             exit();
+        }
+    break;
+    case 6: // Verificación Registro Admin
+        $usuario = $_POST['username'];
+        $token = '3a7Fb9E1pR6XvKtY';
+        $tokenIngresado = $_POST['token'];
+        $mail = $_POST['email'];
+        $password = $_POST['password'];
+
+        if ($token == $tokenIngresado) {
+            $query = "INSERT INTO `usuarios`(`nombre`, `apellido`, `contacto`, `correo`, `contrasena`, `tipo_usuario`) VALUES ('$usuario','', 6666666,'$mail','$password', '2')";
+            mysqli_query($conn, $query);
+            $consulta = mysqli_query($conn, "SELECT * FROM usuarios WHERE correo = '".$mail."'");
+
+            $user = $consulta->fetch_assoc();
+            session_start();
+            $_SESSION['usuario'] =  $user['ID_usuario'];
+            $_SESSION['admin'] = 1;
+            header("Location: /SANSITO-MAPS");
+            exit();
+        }
+        else {
+            echo 'Token incorrecto.';
         }
     break;
 }

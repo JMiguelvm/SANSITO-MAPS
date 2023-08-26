@@ -405,3 +405,66 @@ footer img {
 #sop_tel {
     width: 110px;
 }
+
+#admin {
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+}
+
+#admin input {
+    display: none;
+}
+
+#admin input:checked ~ #admin__options {
+    display: block;
+}
+
+#admin > label {
+    cursor: pointer;
+    font-size: 25px;
+    background-color: #1b1b1f;
+    padding: 10px;
+    border-radius: 0.2em;
+    color: gray;
+}
+
+#admin > label > i {
+    margin: 0 5px;
+}
+
+#admin__options {
+    display: none;
+    color: white;
+    background-color: #1b1b1f;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    position: absolute;
+    border-radius: 0.5em;
+    left: -160px;
+    top: -100px;
+}
+
+#admin__options ul {
+    padding: 0;
+}
+
+#admin__options li {
+    margin: 10px 0;
+    list-style: none;
+    text-align: center;
+    
+}
+
+#admin__options li a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+
+#admin__options li a:hover {
+    color: orange;
+    background-color: #494952;
+    border-radius: 0.5em;
+}
