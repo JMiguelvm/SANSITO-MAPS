@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="modules/css/header.css">
-    <link rel="stylesheet" href="modules/css/pDetails1.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/pDetails1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
     <title>Document</title>
@@ -11,8 +11,8 @@
 <body>
     <div>
             <?php
-                include_once('modules/sql/conexion.php');
-                include('modules/header.php');
+                include_once('sql/conexion.php');
+                include('header.php');
                 $productId = $_GET['productId'];
                 $sql = "SELECT `nombre_producto`, `imagen_producto`, `descripcion`, `precio`, `stock_disponible` FROM productos WHERE ID_producto=".$productId;
             $result = $conn->query($sql);
@@ -80,7 +80,7 @@
             ?>
     </div>
     <?php
-        include('modules/footer.php');
+        include('footer.php');
     ?>
     <script>
         function changeImg (newSrc) {

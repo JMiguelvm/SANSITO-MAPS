@@ -15,6 +15,9 @@ switch($option) {
         if ($mail == $user['correo']) {
             if ($password == $user['contrasena']) {
                 session_start();
+                if ($user['tipo_usuario'] == 2) {
+                    $_SESSION['admin'] = 1;
+                }
                 $_SESSION['usuario'] =  $user['ID_usuario'];
                 header("Location: /SANSITO-MAPS");
                 exit();
@@ -45,18 +48,18 @@ switch($option) {
             $user = $consulta->fetch_assoc();
             session_start();
             $_SESSION['usuario'] =  $user['ID_usuario'];
-            header("Location: ../index.php");
+            header("Location: /SANSITO-MAPSp");
             exit();
         }
         else {
             echo "<script>alert('Las contraseñas deben ser iguales.');</script>";
-            header("Location: ../index.php");
+            header("Location: /SANSITO-MAPS");
         }
     break;
     case 3: //Cerrar sesión
         session_start();
         session_destroy();
-        header("Location: ../index.php");
+        header("Location: /SANSITO-MAPS");
         exit();
     break;
     case 4: // Agregar producto a carrito
@@ -69,15 +72,53 @@ switch($option) {
             else {
                 $_SESSION['cartCount'][] = $productId;
             }
-            header("Location: ../?notification=1");
+            header("Location: /SANSITO-MAPS/?notification=1");
             exit();
         }
         else {
             session_destroy();
-            header("Location: ../?notification=4");
+            header("Location: /SANSITO-MAPS/?notification=4");
             exit();
         }
-        
+    break;
+    case 5: //Eliminar producto del carrito
+        session_start();
+        $productId = $_POST['productId'];
+        $datos = $_SESSION['cartCount'];
+        $posicion = array_search($productId, $datos);
+        if ($posicion !== false) {
+            unset($datos[$posicion]);
+            $datos = array_values($datos);
+            $_SESSION['cartCount'] = $datos;
+            if (empty($_SESSION['cartCount'])) {
+                unset($_SESSION['cartCount']);
+            }
+            header("Location: /SANSITO-MAPS");
+            exit();
+        }
+    break;
+    case 6: // Verificación Registro Admin
+        $usuario = $_POST['username'];
+        $token = '3a7Fb9E1pR6XvKtY';
+        $tokenIngresado = $_POST['token'];
+        $mail = $_POST['email'];
+        $password = $_POST['password'];
+
+        if ($token == $tokenIngresado) {
+            $query = "INSERT INTO `usuarios`(`nombre`, `apellido`, `contacto`, `correo`, `contrasena`, `tipo_usuario`) VALUES ('$usuario','', 6666666,'$mail','$password', '2')";
+            mysqli_query($conn, $query);
+            $consulta = mysqli_query($conn, "SELECT * FROM usuarios WHERE correo = '".$mail."'");
+
+            $user = $consulta->fetch_assoc();
+            session_start();
+            $_SESSION['usuario'] =  $user['ID_usuario'];
+            $_SESSION['admin'] = 1;
+            header("Location: /SANSITO-MAPS");
+            exit();
+        }
+        else {
+            echo 'Token incorrecto.';
+        }
     break;
 }
 

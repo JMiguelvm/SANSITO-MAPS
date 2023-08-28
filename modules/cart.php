@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/cart2.css">
     <link rel="stylesheet" href="categoria/category.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
@@ -44,7 +44,10 @@
                                     <option value="more">Más de 5 unidades</option>
                                 </select>
                             </div>
-                            <button class="product__content__button  product__content__item">Eliminar</button>
+                            <form action="/SANSITO-MAPS/modules/validar.php?option=5" method="post">
+                                <input type="hidden" value="'.$row["ID_producto"].'" name="productId"></input>
+                                <button class="product__content__button  product__content__item" type="submit">Eliminar</button>
+                            </form>                            
                             <button class="product__content__button  product__content__item">Guardar para más tarde</button>
                         </div>
                     </div>
@@ -55,10 +58,23 @@
             include('pago.php');
 
         ?>
+        <button id="boton__comprar" style="display: block; margin: 0 auto;">Comprar</button>
     </div>
     </div>
     <?php
         include('footer.php');
     ?>
+    <script>
+        const buy__button = document.getElementById("boton__comprar");
+        const pagoContainer = document.getElementById("pagoContainer");
+        
+        buy__button.addEventListener("click", function(){
+            pagoContainer.style.display="block";
+        });
+
+        function cerrarForm() {
+            pagoContainer.style.display = "none";
+        }
+    </script>
 </body>
 </html>
