@@ -48,7 +48,7 @@ switch($option) {
             $user = $consulta->fetch_assoc();
             session_start();
             $_SESSION['usuario'] =  $user['ID_usuario'];
-            header("Location: /SANSITO-MAPSp");
+            header("Location: /SANSITO-MAPS");
             exit();
         }
         else {
