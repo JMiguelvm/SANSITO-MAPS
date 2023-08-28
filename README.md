@@ -29,14 +29,14 @@ Desarrollar una aplicación y/o web para dar un enfoque digital a las plazas com
 10. Pestaña de Perfil de tienda (Samuel)
 12. Pestaña de Favoritos(cris)
 13. Pestaña de Valoraciones y Reseñas(cris)
-14. Pestaña de Envío y Entrega (Jose)
+14. Pestaña de Envío y Entrega (Jose) ✔️
 15. Pestaña de inicio y registro (cris) ✔️
 
 ## Pestañas de vendedor
 1. Pestaña de Administración de Productos (Jose) ✔️
-2. Pestaña de Agregar Producto-Pestaña de Editar Producto (Samuel)
+2. Pestaña de Agregar Producto-Pestaña de Editar Producto (Samuel) ✔️
 3. Pestaña de Promociones y Descuentos (mijail) ✔️
 5. Pestaña de Gestión de Pedidos (mijail)
-6. Pestaña de Configuración de Pagos (cris)
+6. Pestaña de Configuración de Pagos (cris) ✔️
 
 
