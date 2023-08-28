@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="modules/css/header1.css">
-    <link rel="stylesheet" href="modules/css/pDetails1.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/pDetails1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
     <title>SANSITO-MAPS</title>
 </head>
 <body>
     <div>
-    <?php
-    include_once('modules/sql/conexion.php');
-    include('modules/header.php');
-    $productId = $_GET['productId'];
-    $sql = "SELECT `nombre_producto`, `imagen_producto`, `descripcion`, `precio`, `stock_disponible`, `descuento` FROM productos WHERE ID_producto=".$productId;
-    $result = $conn->query($sql);
+            <?php
+                include_once('sql/conexion.php');
+                include('header.php');
+                $productId = $_GET['productId'];
+                $sql = "SELECT `nombre_producto`, `imagen_producto`, `descripcion`, `precio`, `stock_disponible` FROM productos WHERE ID_producto=".$productId;
+            $result = $conn->query($sql);
 
+            
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<div style="padding-top: 100px;">
@@ -112,8 +113,7 @@
     </div>
 
     <?php
-        include('modules/footer.php');
-        include('modules/category.php');
+        include('footer.php');
     ?>
     <script src="modules/js/category.js"></script>
     <script>

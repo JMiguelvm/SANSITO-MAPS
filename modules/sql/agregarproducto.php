@@ -10,5 +10,5 @@
     $Descuento = $_POST['descuento'];
 
     mysqli_query($conn, "INSERT INTO productos(nombre_producto,imagen_producto,descripcion,precio,stock_disponible,descuento,categoria) VALUES('$NombreProducto','$ImagenProducto','$Descripcion','$Precio','$stock','$Descuento','$Categoria')");
-    header("Location: ../AgregarProductoAdmin.php");
+    header("Location: ../admin/producto/agregar.php");
 ?>
