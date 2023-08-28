@@ -33,7 +33,7 @@ Desarrollar una aplicación y/o web para dar un enfoque digital a las plazas com
 15. Pestaña de inicio y registro (cris) ✔️
 
 ## Pestañas de vendedor
-1. Pestaña de Administración de Productos (Jose)
+1. Pestaña de Administración de Productos (Jose) ✔️
 2. Pestaña de Agregar Producto-Pestaña de Editar Producto (Samuel)
 3. Pestaña de Promociones y Descuentos (mijail)
 5. Pestaña de Gestión de Pedidos (mijail)
