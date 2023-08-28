@@ -57,8 +57,9 @@
      <header>
      <div class="navBar">
          <div class="searchBar">
-             <input type="text" id="searchText" placeholder="Buscar...">
-             <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="categoriasBtn"><i class="fas fa-bars"></i></button>
+            <input type="text" id="searchText" placeholder="Buscar...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
          </div>
          <a href="/SANSITO-MAPS" id="sansitoMaps">SANSITO-MAPS</a>
          <div class="buttons">

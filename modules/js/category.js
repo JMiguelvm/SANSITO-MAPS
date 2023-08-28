@@ -11,3 +11,5 @@ document.addEventListener("DOMContentLoaded", function () {
     barraLateral.classList.remove("activo");
   });
 });
+
+

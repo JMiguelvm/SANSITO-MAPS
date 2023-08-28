@@ -3,13 +3,15 @@
 
   <div class="product-container">
   <?php
-    $sql = "SELECT `ID_producto`, `nombre_producto`, `imagen_producto`, `precio` FROM productos";
-    $result = $conn->query($sql);
+$sql = "SELECT `ID_producto`, `nombre_producto`, `imagen_producto`, `precio`, `descuento` FROM productos";
+$result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo '<div class="product">
-                    <div class="product-inner">
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $precioFormateado = number_format($row["precio"], 0, ',', '.');
+        
+        echo '<div class="product">
+                <div class="product-inner">
                     <div class="product-image">
                         <a href="product_details.php?productId=' . $row["ID_producto"] .'"><img src="' . $row["imagen_producto"] . '" alt="' . $row["nombre_producto"] . '"></a>
                     </div>
@@ -17,16 +19,49 @@
                     <h4 class="product-provider">Proveedor ID #</h4>
                     <div class="product-rating">
                         <span class="stars">&#9733; -.-</span>
-                    </div>
-                    <p class="product-pr  8 = [1,2,3] ice">$' . $row["precio"] . ' COP</p>
-                    <button class="product-buy">Comprar</button>
-                    <form action="modules/validar.php?option=4" method="post">
-                        <button name="productId" value="' . $row["ID_producto"] .'"type="submit" class="product-cart">Añadir al carrito</button>
-                    </form>      
-                    </div>
-                </div>';
+                    </div>';
+        
+        echo '<style>
+            .strike {
+                text-decoration: line-through;
+            }
+            
+            .discount-price {
+                color: green;
+            }
+            
+            .discount-text {
+                font-weight: bold;
+                color: red;
+            }
+            
+            .discount-value {
+                font-weight: bold;
+                color: red;
+            }
+        </style>';
+        
+        if ($row["descuento"] > 0) {
+            $precioConDescuento = $row["precio"] * (1 - ($row["descuento"] / 100));
+            $precioConDescuentoFormateado = number_format($precioConDescuento, 0, ',', '.');
+            
+            echo '<p class="product-price">Precio: <span class="strike">$' . $precioFormateado . ' COP</span></p>';
+            echo '<p class="product-price discount-price">Ahora: <span class="discount-price">$' . $precioConDescuentoFormateado . ' COP</span></p>';
+            echo '<p class="product-discount discount-text">Descuento: <span class="discount-value">' . $row["descuento"] . '%</span></p>';
+        } else {
+            // Mostrar solo el precio normal para los productos sin descuento
+            echo '<p class="product-price">Precio: $' . $precioFormateado . ' COP</p>';
         }
+        
+        echo '<button class="product-buy">Comprar</button>
+              <form action="modules/validar.php?option=4" method="post">
+                  <button name="productId" value="' . $row["ID_producto"] .'"type="submit" class="product-cart">Añadir al carrito</button>
+              </form>      
+              </div>
+            </div>';
     }
-    $conn->close();
-?>     
-  </div>
+}
+
+$conn->close();
+?>
+</div>
