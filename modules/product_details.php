@@ -15,7 +15,11 @@
                 include('header.php');
                 $productId = $_GET['productId'];
                 $sql = "SELECT `nombre_producto`, `imagen_producto`, `descripcion`, `precio`, `stock_disponible` FROM productos WHERE ID_producto=".$productId;
-            $result = $conn->query($sql);
+                $result = $conn->query($sql);
+                $comentario = "SELECT `comentario`, `puntuacion` FROM valoraciones WHERE ID_valoracion=".$valoracion;
+                $resulta = $conn->query($comentario);
+                $valoracion = $_GET['ID_valoracion'];
+
 
             
     if ($result->num_rows > 0) {
@@ -52,6 +56,10 @@
                         <label for="star1"></label>
                     </div>
                     <p id="product__description">'. $row["descripcion"] .'</p>';
+                    ?>
+                    +
+
+                    <?php        
             
             $precioNormalFormateado = number_format($row["precio"], 0, ',', '.');
             $precioConDescuento = $row["precio"] * (1 - ($row["descuento"] / 100));
