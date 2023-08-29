@@ -1,7 +1,7 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="modules/css/header1.css">
+    <link rel="stylesheet" href="modules/css/header.css">
     <link rel="stylesheet" href="modules/css/product.css">
     <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
 </head>
@@ -18,21 +18,24 @@
     <div class="product-container">
     <?php
     $conexion = mysqli_connect("localhost", "root", "", "sansitooo");
+    
+    if (!$conexion) {
+        die("Error de conexión: " . mysqli_connect_error());
+    }
+
     $mostrarDescuento = isset($_POST['descuento']) && $_POST['descuento'] === 'true';
 
-    // Filtros ;)
     if (isset($_POST['orden'])) {
         $orden = $_POST['orden'];
 
         if ($orden === "recent") {
             $ordenSQL = "p.fecha_agregado DESC";
         } elseif ($orden === "rating") {
-            $ordenSQL = "AVG(v.valoracion) DESC";
+            $ordenSQL = "AVG(v.puntuacion) DESC";
         } else {
             $ordenSQL = "p.precio $orden";
         }
     } else {
-
         $ordenSQL = "p.fecha_agregado DESC";
     }
 
@@ -43,7 +46,7 @@
         $descuentoCondicion = "AND p.descuento > 0";
     }
 
-    $sql = "SELECT p.`ID_producto`, p.`nombre_producto`, p.`imagen_producto`, p.`precio`, p.`categoria`, p.`descuento`, AVG(v.valoracion) AS promedio_valoracion, COUNT(v.valoracion) AS cantidad_valoraciones
+    $sql = "SELECT p.`ID_producto`, p.`nombre_producto`, p.`imagen_producto`, p.`precio`, p.`categoria`, p.`descuento`, AVG(v.puntuacion) AS promedio_valoracion, COUNT(v.puntuacion) AS cantidad_valoraciones
             FROM productos p
             LEFT JOIN valoraciones v ON p.ID_producto = v.ID_producto
             WHERE $categoriaCondicion $descuentoCondicion
@@ -52,11 +55,26 @@
 
     $resultado = mysqli_query($conexion, $sql);
 
+    if (!$resultado) {
+        die("Error en la consulta: " . mysqli_error($conexion));
+    }
+
     while ($f = mysqli_fetch_assoc($resultado)) {
+        $precioNormalFormateado = number_format($f["precio"], 0, ',', '.');
+
+        if (isset($f["descuento"])) {
+            $descuento = $f["descuento"];
+        } else {
+            $descuento = 0; // O cualquier otro valor predeterminado
+        }
+
+        $precioConDescuento = $f["precio"] * (1 - ($descuento / 100));
+        $precioConDescuentoFormateado = number_format($precioConDescuento, 0, ',', '.');
+
         echo '<div class="product">
             <div class="product-inner">
                 <div class="product-image">
-                    <a href="product_details.php?productId=' . $f["ID_producto"] . '"><img src="' . $f["imagen_producto"] . '" alt="' . $f["nombre_producto"] . '"></a>
+                    <a href="modules/product_details.php?productId=' . $f["ID_producto"] . '"><img src="' . $f["imagen_producto"] . '" alt="' . $f["nombre_producto"] . '"></a>
                 </div>
                 <h2 class="product-name">' . $f["nombre_producto"] . '</h2>
                 <h4 class="product-provider">Proveedor ID #</h4>
@@ -65,10 +83,6 @@
                     <span class="rating-count"><br>' . ($f["cantidad_valoraciones"] ?? 0) . ' valoraciones</span>
                 </div>';
 
-        $precioNormalFormateado = number_format($f["precio"], 0, ',', '.');
-        $precioConDescuento = $f["precio"] * (1 - ($f["descuento"] / 100));
-        $precioConDescuentoFormateado = number_format($precioConDescuento, 0, ',', '.');
-        
         echo '<style>
             .strike {
                 text-decoration: line-through;
@@ -94,7 +108,7 @@
             echo '<p class="product-price"><span class="discount-price">Ahora: $' . $precioConDescuentoFormateado . ' COP</span></p>';
         }
         
-        echo '<p class="product-discount"><span class="discount-text">Descuento:</span> <span class="discount-value">' . $f["descuento"] . '%</span></p>';
+        echo '<p class="product-discount"><span class="discount-text">Descuento:</span> <span class="discount-value">' . $descuento . '%</span></p>';
         echo '<button class="product-buy">Comprar</button>
             <form action="modules/validar.php?option=4" method="post">
                 <button name="productId" value="' . $f["ID_producto"] . '" type="submit" class="product-cart">Añadir al carrito</button>
@@ -111,3 +125,4 @@
     ?>
 </body>
 </html>
+  
