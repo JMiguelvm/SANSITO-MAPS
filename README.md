@@ -22,7 +22,7 @@ Desarrollar una aplicación y/o web para dar un enfoque digital a las plazas com
 3. Pestaña de Categorías (mijail) ✔️
 4. Pestaña de Detalles del Producto (Jose) ✔️
 5. Pestaña de Carrito de Compras (Jose) ✔️
-6. Pestaña de Mi Cuenta (Samuel) VAMOS 3 SEMANAS
+6. Pestaña de Mi Cuenta (Samuel) CHUPA CHUPA
 7. Pestaña de Navegación en el Mapa (cris) 
 8. Pestaña de Filtros de Búsqueda Avanzada (mijail) ✔️
 9. Pestaña de Soporte o Contacto (cris) ✔️
