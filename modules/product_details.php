@@ -16,9 +16,10 @@
                 $productId = $_GET['productId'];
                 $sql = "SELECT `nombre_producto`, `imagen_producto`, `descripcion`, `precio`, `stock_disponible` FROM productos WHERE ID_producto=".$productId;
                 $result = $conn->query($sql);
-                // $comentario = "SELECT `comentario`, `puntuacion` FROM valoraciones WHERE ID_valoracion=".$valoracion;
-                // $resulta = $conn->query($comentario);
-                // $valoracion = $_GET['ID_valoracion'];
+                $comentario = "SELECT `ID_usuario`, `comentario`, `puntuacion` FROM valoraciones WHERE ID_producto=".$productId;
+                $resulta = $conn->query($comentario);
+
+                
 
 
             
@@ -44,7 +45,7 @@
                 <div id="product__attributes">
                     <h2 id="product__name">'. $row["nombre_producto"] .'</h2>
                     <div class="rating clearfix">
-                    <form action="" method="post">
+                    <form action="sql/valoracionsql.php?idUser='.$_SESSION['usuario'].'" method="post">
                         <input type="radio" class="pComentario" id="star5" name="rating" value="5">
                         <label for="star5"></label>
                         <input type="radio" class="pComentario" id="star4" name="rating" value="4">
@@ -55,18 +56,16 @@
                         <label for="star2"></label>
                         <input type="radio" class="pComentario" id="star1" name="rating" value="1">
                         <label for="star1"></label>
+                        <input type="hidden" name="idProducto" value="'.$productId.'">
                         <div id="comentario">
-                            <textarea id="story" name="story" rows="5" cols="33">Ingrese su comentario..</textarea>
+                            <textarea name="comentario" rows="5" cols="33">Ingrese su comentario..</textarea>
                             <button type="submit">Enviar</button>
                             <button type="button" id="cancelButton">Cancelar</button>
                         </div>
                     </form>
                     </div>
                     <p id="product__description">'. $row["descripcion"] .'</p>';
-                    ?>
-                    +
-
-                    <?php        
+                       
             
             $precioNormalFormateado = number_format($row["precio"], 0, ',', '.');
             $precioConDescuento = $row["precio"] * (1 - ($row["descuento"] / 100));
@@ -148,6 +147,22 @@
                 </div>';
                 }
             }
+            if($resulta->num_rows > 0)
+            {
+                while ($roww = $resulta->fetch_assoc()){
+                    $usuariosql = "SELECT `nombre`, `apellido` FROM usuarios WHERE ID_usuario=".$roww['ID_usuario'];
+                    $aaa = $conn->query($usuariosql);
+                    $resultado = $aaa->fetch_assoc();
+                    $nombreComp =  $resultado['nombre'].' '. $resultado['apellido'];
+                    echo '<center>
+                    <table>
+                        <tr>'.$nombreComp .'</tr>
+                        <tr>Valoracion <h2>'.$roww["puntuacion"].'</h2></tr>
+                        <tr><td><th><h2>'.$roww["comentario"].'</h2></th></td></tr>
+                    </table>
+                    </center>';
+                }
+            }       
             $conn->close();
         ?>
     </div>
@@ -177,3 +192,4 @@
     </script>
 </body>
 </html>
+
