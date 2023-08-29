@@ -10,49 +10,6 @@
 </head>
 <body>
     <div>
-<<<<<<< HEAD
-        <?php
-            include_once('sql/conexion.php');
-            include('header.php');
-            $productId = $_GET['productId'];
-            $sql = "SELECT `nombre_producto`, `imagen_producto`, `descripcion`, `precio`, `stock_disponible`, `descuento` FROM productos WHERE ID_producto=".$productId;
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo '<div style="padding-top: 100px;">
-                    <div id="product__container">
-                        <div id="product__images">
-                            <div class="image__container">
-                                <img id="product__image1" onclick="changeImg(`'. $row["imagen_producto"] .'`)" class="product__image" src="'. $row["imagen_producto"] .'" width="80" height="80">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="image__container">
-                                <img id="product__image2" onclick="changeImg(`'. $row["imagen_producto"] .'`)" class="product__image" src="'. $row["imagen_producto"] .'" width="80" height="80">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="image__container">
-                                <img id="product__image3" onclick="changeImg(`'. $row["imagen_producto"] .'`)" class="product__image" src="'. $row["imagen_producto"] .'" width="80" height="80">
-                                <div class="overlay"></div>
-                            </div>
-                            <img id="product__mainImage" class="product__mainImage" src="'. $row["imagen_producto"] .'" width="400" height="400">
-                        </div>
-                        <div id="product__attributes">
-                            <h2 id="product__name">'. $row["nombre_producto"] .'</h2>
-                            <div class="rating clearfix">
-                                <input type="radio" id="star5" name="rating" value="5">
-                                <label for="star5"></label>
-                                <input type="radio" id="star4" name="rating" value="4">
-                                <label for="star4"></label>
-                                <input type="radio" id="star3" name="rating" value="3">
-                                <label for="star3"></label>
-                                <input type="radio" id="star2" name="rating" value="2">
-                                <label for="star2"></label>
-                                <input type="radio" id="star1" name="rating" value="1">
-                                <label for="star1"></label>
-                            </div>
-                            <p id="product__description">'. $row["descripcion"] .'</p>';
-=======
             <?php
                 include_once('sql/conexion.php');
                 include('header.php');
@@ -134,7 +91,6 @@
                     color: red;
                 }
             </style>';
->>>>>>> 65d1de5df40775dc8e57ff8474f1971ee1be0f0e
 
                     $precioNormalFormateado = number_format($row["precio"], 0, ',', '.');
                     $descuento = isset($row["descuento"]) ? $row["descuento"] : 0;
