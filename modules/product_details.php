@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/pDetails1.css">
+    <link rel="stylesheet" href="css/pDetails.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
     <title>SANSITO-MAPS</title>
@@ -16,9 +16,9 @@
                 $productId = $_GET['productId'];
                 $sql = "SELECT `nombre_producto`, `imagen_producto`, `descripcion`, `precio`, `stock_disponible` FROM productos WHERE ID_producto=".$productId;
                 $result = $conn->query($sql);
-                $comentario = "SELECT `comentario`, `puntuacion` FROM valoraciones WHERE ID_valoracion=".$valoracion;
-                $resulta = $conn->query($comentario);
-                $valoracion = $_GET['ID_valoracion'];
+                // $comentario = "SELECT `comentario`, `puntuacion` FROM valoraciones WHERE ID_valoracion=".$valoracion;
+                // $resulta = $conn->query($comentario);
+                // $valoracion = $_GET['ID_valoracion'];
 
 
             
@@ -44,16 +44,23 @@
                 <div id="product__attributes">
                     <h2 id="product__name">'. $row["nombre_producto"] .'</h2>
                     <div class="rating clearfix">
-                        <input type="radio" id="star5" name="rating" value="5">
+                    <form action="" method="post">
+                        <input type="radio" class="pComentario" id="star5" name="rating" value="5">
                         <label for="star5"></label>
-                        <input type="radio" id="star4" name="rating" value="4">
+                        <input type="radio" class="pComentario" id="star4" name="rating" value="4">
                         <label for="star4"></label>
-                        <input type="radio" id="star3" name="rating" value="3">
+                        <input type="radio" class="pComentario" id="star3" name="rating" value="3">
                         <label for="star3"></label>
-                        <input type="radio" id="star2" name="rating" value="2">
+                        <input type="radio" class="pComentario" id="star2" name="rating" value="2">
                         <label for="star2"></label>
-                        <input type="radio" id="star1" name="rating" value="1">
+                        <input type="radio" class="pComentario" id="star1" name="rating" value="1">
                         <label for="star1"></label>
+                        <div id="comentario">
+                            <textarea id="story" name="story" rows="5" cols="33">Ingrese su comentario..</textarea>
+                            <button type="submit">Enviar</button>
+                            <button type="button" id="cancelButton">Cancelar</button>
+                        </div>
+                    </form>
                     </div>
                     <p id="product__description">'. $row["descripcion"] .'</p>';
                     ?>
@@ -127,8 +134,21 @@
     <script>
         function changeImg (newSrc) {
             var mainImg = document.getElementById("product__mainImage");
-            mainImg.setAttribute("src", newSrc)
+            mainImg.setAttribute("src", newSrc);
         }
+
+        const comentarioTextArea = document.getElementById("comentario");
+        const comentarioCancelar = document.getElementById("cancelButton");
+        const comentarioEstrella = document.getElementsByClassName("pComentario");
+
+        for (let i = 0; i < comentarioEstrella.length; i++) {
+            comentarioEstrella[i].addEventListener("click", function () {
+                comentarioTextArea.style.display = "block";
+            });
+        }
+        comentarioCancelar.addEventListener("click", function () {
+            comentarioTextArea.style.display = "none";
+        });
     </script>
 </body>
 </html>
