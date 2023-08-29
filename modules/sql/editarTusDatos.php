@@ -31,5 +31,6 @@
         mysqli_query($conn, "UPDATE usuarios set correo='$email' WHERE ID_usuario=$idUser");
     }
 
-
+    header("Location: \SANSITO-MAPS\Bocetos\MiCuentaV2/tusDatos.php");
+    exit();
 ?>

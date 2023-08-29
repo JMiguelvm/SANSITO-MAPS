@@ -17,14 +17,12 @@
     height: 70px;
     background-color: #CA1214;
 }
-
 .searchBar {
     margin: auto 0;
     margin-left: 15px;
     display: inline-block;
     grid-column: span 1;
 }
-
 #sansitoMaps {
     margin: auto 0;
     text-align: center;
@@ -34,7 +32,6 @@
     color: #F9CE3A;
     grid-column: span 1;
 }
-
 #userAccess {
     margin: auto 0;
     width: 70px;
@@ -47,7 +44,7 @@
 }
 
 #userAccess > i {
-     color: white;
+    color: white;
 }
 
 #userAccess:hover {
@@ -69,7 +66,6 @@
 #searchText::placeholder {
     color: rgb(214, 214, 214);
 }
-
 .searchBar > button {
     width: 20px;
     height: 20px;
@@ -83,64 +79,4 @@
 
 .searchBar > button > i {
     font-size: 18px;
-}
-
-#myAccount {
-    padding-top: 70px;
-    width: 100%;
-    height: 1000px;
-    display: flex;
-}
-
-#myAccount__options{
-    height: 100%;
-    display: inline-block;
-    background-color: #DFDFDF;
-    width: 30%;.
-}
-
-#myAccount__main{
-    display: flex;
-    height: 360px;
-    background-color: hsl(0, 11%, 93%);
-    width: 70%;
-}
-
-#main__profilePicture{
-    margin: auto 0;
-    margin-left: 10px;
-    width: 350px;
-    height: 350px;                           
-}
-
-#main__profilePicture > img {
-    width: 100%;
-    height: 100%;
-}
-
-
-.myAccount__btns {
-    display: inline-block;
-    width: calc(100% - 350px);
-}
-
-.options__button {
-    text-align: left;
-    display: block;
-    width: 100%;
-    height: 50px;
-}
-
-.options__button__text {
-    display: inline-block;
-}
-
-i {
-    font-size: 35px;
-}
-
-
-.main__btn__text {
-    display: block;
-}
 }

@@ -117,7 +117,7 @@
     height: 100px;
     display: inline-block; 
     font-size:70px;
-    border: 2px solid rgb(75, 117, 255);
+    border: 2px solid gray;
     border-radius: 50%;
     padding: 10px;
     text-align: center;
@@ -143,7 +143,7 @@
 }
 
 #namePhoto__user{
-    font-size: 50px;
+    font-size: 30px;
 }
 
 #main__exampleTxt{
@@ -154,27 +154,25 @@
 }
 
 .main__btns{
-
     background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-    padding: 20px;
+    padding: 30px;
     border-radius: 17px;
     width: 510px;
     margin: 0 auto;
 }
 
 .btns__ulStyle{
+    padding: 0;
     list-style: none;
     border: none;
     display: inline-block;
     width: 100%;
-    height: 50px;
-    margin-bottom: 20px;
 }
 
 
 .btns__style{
-    margin-bottom: 30px;
+    padding-bottom: 10px;
     margin-left: 5px;
 }
 
@@ -188,15 +186,21 @@
     width: 200px;
 }
 
+.link__container i {
+    font-size: 25px;
+    text-align: center;
+    width: 60px;
+}
+
 .btns__img{
     font-size:30px;
-    border: 2px solid rgb(75, 117, 255);
+    border: 2px solid black;
     border-radius: 50%;
-    padding: 10px;
+    padding: 15px;
 }
 
 .btns__text{
-    width: 1000px;
+    margin-left: 10px;
 }
 
 .button-subText{
@@ -409,6 +413,112 @@
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+}
+
+.main__secu{
+    width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.secu-container{
+    width: 600px;
+}
+
+.form-container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+
+.container__passw{
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; 
+    top: 50px;
+    left: 450px;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(20, 20, 20, 0.1);
+    padding: 30px;
+    border-radius: 17px;
+}
+
+#btn__passw{
+    width: 700px;
+    height: auto;
+}
+
+#form__passw{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.719);
+    justify-content: center;
+    align-items: center;
+}
+
+.container__id{
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; 
+    top: 50px;
+    left: 450px;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(20, 20, 20, 0.1);
+    padding: 30px;
+    border-radius: 17px;
+}
+
+#btn__id{
+    width: 700px;
+    height: auto;
+}
+
+#form__id{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.719);
+    justify-content: center;
+    align-items: center;
+}
+
+
+#btn-passw{
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(80, 80, 255);
+    color: white;
+    cursor: pointer;
+}
+
+#btn-cerrar-passw{
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(80, 80, 255);
+    color: white;
+    cursor: pointer;
+}
+
+
+#btn-cerrar-id{
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(80, 80, 255);
+    color: white;
+    cursor: pointer;
+}
+
+#input__idSecurity{
+    cursor: default;
 }
 
 i {

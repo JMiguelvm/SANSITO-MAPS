@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: 'Want Coffe';
+    src: url('resources/Want\ Coffee.ttf') format('truetype');
+}
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 70px;
+    background-color: #CA1214;
+}
+
+.searchBar {
+    margin: auto 0;
+    margin-left: 15px;
+    display: inline-block;
+    grid-column: span 1;
+}
+
+#sansitoMaps {
+    margin: auto 0;
+    text-align: center;
+    display: inline-block;
+    font-size: 40px;
+    font-family:'Want Coffe', sans-serif;
+    color: #F9CE3A;
+    grid-column: span 1;
+}
+
+#userAccess {
+    margin: auto 0;
+    width: 70px;
+    height: 70px;
+    background: none;
+    justify-self: end;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#userAccess > i {
+     color: white;
+}
+
+#userAccess:hover {
+    transition: 0.3s;
+    background: #b30f12;
+}
+
+#searchText {
+    padding: 5px;
+    height: 30px;
+    border: none;
+    background-color: #b30f12;
+    border-radius: 0.5em;
+    font-size: 15px;
+    font-weight: blod;
+    font-weight: bold;
+}
+
+#searchText::placeholder {
+    color: rgb(214, 214, 214);
+}
+
+.searchBar > button {
+    width: 20px;
+    height: 20px;
+    color: white;
+    background: none;
+    justify-self: end;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.searchBar > button > i {
+    font-size: 18px;
+}
