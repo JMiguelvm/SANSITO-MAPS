@@ -24,7 +24,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <script src="index.js"></script>
-        <link rel="stylesheet" href="index8.css">
+        <link rel="stylesheet" href="index2.css">
         <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tus Datos</title>
@@ -146,7 +146,6 @@
         this.submit();
     });
 </script>
-
 </script>
 </body>
 </html>       
