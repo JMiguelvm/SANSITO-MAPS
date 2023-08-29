@@ -73,7 +73,7 @@
                 echo '<div class="product">
                     <div class="product-inner">
                         <div class="product-image">
-                            <a href="product_details.php?productId=' . $f["ID_producto"] . '"><img src="' . $f["imagen_producto"] . '" alt="' . $f["nombre_producto"] . '"></a>
+                            <a href="modules/product_details.php?productId=' . $f["ID_producto"] . '"><img src="' . $f["imagen_producto"] . '" alt="' . $f["nombre_producto"] . '"></a>
                         </div>
                         <h2 class="product-name">' . $f["nombre_producto"] . '</h2>
                         <h4 class="product-provider">Proveedor ID #</h4>
