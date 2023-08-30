@@ -15,7 +15,7 @@
         <?php
             include_once('sql/conexion.php');
             include('header.php');
-            include('categoria/category.php');
+            include('category.php');
         ?>
         
         <?php
