@@ -9,7 +9,20 @@ include('modules/PAGO.php');
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $precioFormateado = number_format($row["precio"], 0, ',', '.');
-        
+        $promedioQuery = $conn->query("SELECT FORMAT(AVG(puntuacion), 1) AS promedio_valoracion
+        FROM valoraciones
+        WHERE ID_producto = " . $row["ID_producto"]);
+
+        if ($promedioQuery->num_rows ) {
+            $promedioRow = $promedioQuery->fetch_assoc();
+            if (isset($promedioRow['promedio_valoracion'])) {
+                $promedioValoracion = $promedioRow['promedio_valoracion'];
+            }
+            else {
+                $promedioValoracion = 'N/A';
+            }
+
+        }
         echo '<div class="product">
                 <div class="product-inner">
                     <div class="product-image">
@@ -18,7 +31,7 @@ if ($result->num_rows > 0) {
                     <h2 class="product-name">' . $row["nombre_producto"] . '</h2>
                     <h4 class="product-provider">Proveedor ID #</h4>
                     <div class="product-rating">
-                        <span class="stars">&#9733; -.-</span>
+                        <span class="stars">&#9733; '.$promedioValoracion.'</span>
                     </div>';
         
         echo '<style>

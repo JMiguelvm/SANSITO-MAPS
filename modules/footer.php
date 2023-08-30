@@ -11,6 +11,7 @@
                 <p class="footer_title">Teléfono</p>
                 <p><i class="fa-solid fa-phone"></i>666-6666</p>
             </div>
+            <label for="">Registrar una tienda</label>
         </div>
     </div>
 </footer>

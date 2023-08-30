@@ -14,7 +14,7 @@
                 include_once('sql/conexion.php');
                 include('header.php');
                 $productId = $_GET['productId'];
-                $sql = "SELECT `nombre_producto`, `imagen_producto`, `descripcion`, `precio`, `stock_disponible` FROM productos WHERE ID_producto=".$productId;
+                $sql = "SELECT `nombre_producto`, `imagen_producto`, `descripcion`, `precio`, `stock_disponible`, `descuento` FROM productos WHERE ID_producto=".$productId;
                 $result = $conn->query($sql);
                 $comentario = "SELECT `ID_usuario`, `comentario`, `puntuacion` FROM valoraciones WHERE ID_producto=".$productId;
                 $resulta = $conn->query($comentario);
@@ -154,13 +154,11 @@
                     $aaa = $conn->query($usuariosql);
                     $resultado = $aaa->fetch_assoc();
                     $nombreComp =  $resultado['nombre'].' '. $resultado['apellido'];
-                    echo '<center>
-                    <table>
-                        <tr>'.$nombreComp .'</tr>
-                        <tr>Valoracion <h2>'.$roww["puntuacion"].'</h2></tr>
-                        <tr><td><th><h2>'.$roww["comentario"].'</h2></th></td></tr>
-                    </table>
-                    </center>';
+                    echo '
+                    <div class="comentario__usuario">
+                        <h4>'.$nombreComp .'</h4><span>&#9733 '.$roww["puntuacion"].'</span>
+                        <p>'.$roww["comentario"].'.</p>
+                    </div>';
                 }
             }       
             $conn->close();

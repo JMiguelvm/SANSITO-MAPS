@@ -25,6 +25,15 @@
             $conn->close();
         ?>
     </div>
+    <div id="shopAdmin">
+        <label for="shopIcon"><i class="fa-solid fa-store"></i></label>
+        <input type="checkbox" name="shopIcon" id="shopIcon">
+    <ul id="shopOpciones">
+        <li><a href="">Productos</a></li>
+        <li><a href="">Pedidos</a></li>
+        <li><a href="">Perfil</a></li>
+    </ul>
+    </div>
     <?php
         include('modules/footer.php');
     ?>
