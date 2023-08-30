@@ -190,6 +190,23 @@ body > div {
     font-size: 15px;
 }
 
+#user_panel li button{
+    background-color: #b30f12;
+    border: none;
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    font-family: sans-serif;
+    transition: .5s;
+    cursor: pointer;
+}
+
+#user_panel li button:hover {
+    color: #F9CE3A;
+    font-size: 15px;
+}
+
 #user_panel input {
     appearance: none;
 }
