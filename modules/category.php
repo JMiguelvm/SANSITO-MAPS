@@ -7,10 +7,15 @@
       <label for="categoria">Categoria:</label><br>
       <select name="categoria" class="select-categoria">
         <option value="">Todas las categorías</option>
-        <option value="tecnologia">Tecnologia</option>
-        <option value="ropa">Ropa</option>
-        <option value="calzado">Calzado</option>
-        <option value="belleza">Belleza</option>
+        <?php
+          $categoriaQuery = mysqli_query($conn, 'SELECT DISTINCT categoria
+          FROM productos
+          WHERE categoria IS NOT NULL;
+          ');
+          while($row = $categoriaQuery->fetch_assoc()) {
+            echo '<option value="' . $row["categoria"] . '">' . $row["categoria"] . '</option>';
+          }
+        ?>
       </select>
       <label for="orden">Ordenar por:</label><br>
       <select name="orden" id="orden" class="select-orden">
@@ -41,6 +46,7 @@
     }
 
     #barraLateral {
+      padding: 10px;
       position: fixed;
       top: 0;
       left: -300px;

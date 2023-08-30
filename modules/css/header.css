@@ -190,7 +190,7 @@ body > div {
     font-size: 15px;
 }
 
-#user_panel li button{
+#userButton{
     background-color: #b30f12;
     border: none;
     display: block;
@@ -202,7 +202,7 @@ body > div {
     cursor: pointer;
 }
 
-#user_panel li button:hover {
+#userButton:hover {
     color: #F9CE3A;
     font-size: 15px;
 }
@@ -484,4 +484,54 @@ footer img {
     color: orange;
     background-color: #494952;
     border-radius: 0.5em;
+}
+
+#shopAdmin {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+}
+
+#shopAdmin input {
+    display: none;
+}
+
+#shopAdmin label {
+    background-color: #F9CE3A;
+    padding: 5px;
+    font-size: 40px;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#shopAdmin label:hover {
+    color: #b30f12;
+}
+
+#shopIcon:checked ~ #shopOpciones {
+    display: block;
+}
+
+#shopOpciones {
+    display: none;
+    position: fixed;
+    right: 90px;
+    list-style: none;
+    padding: 0;
+    padding: 10px;
+    border-radius: 0.5em;
+    background-color: #F9CE3A;
+    bottom: 50px;
+}
+
+#shopOpciones a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: 0.2s;
+}
+
+#shopOpciones a:hover {
+    color: #b30f12;
 }

@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="modules/css/header.css">
+    <link rel="stylesheet" href="modules/css/mapa.css">
     <link rel="stylesheet" href="modules/css/cuenta.css">
-    <link rel="stylesheet" href="modules/css/product1.css">
+    <link rel="stylesheet" href="modules/css/product.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
@@ -17,10 +18,21 @@
             include_once('modules/sql/conexion.php');
             include('modules/header.php');
             include('modules/cuenta.php');
+            include('modules/mapas.php');
             include('modules/products.php');
             include('modules/category.php');
             include('modules/notification.php');
+            $conn->close();
         ?>
+    </div>
+    <div id="shopAdmin">
+        <label for="shopIcon"><i class="fa-solid fa-store"></i></label>
+        <input type="checkbox" name="shopIcon" id="shopIcon">
+    <ul id="shopOpciones">
+        <li><a href="">Productos</a></li>
+        <li><a href="">Pedidos</a></li>
+        <li><a href="">Perfil</a></li>
+    </ul>
     </div>
     <?php
         include('modules/footer.php');

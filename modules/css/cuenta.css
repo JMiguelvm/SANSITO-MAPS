@@ -31,6 +31,7 @@
     background-color: gainsboro;
 }
 .btns__style__link{
+    cursor: pointer;
     text-decoration: none;
     color: rgb(14, 14, 14);
     width: 100px;

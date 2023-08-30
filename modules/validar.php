@@ -92,9 +92,13 @@ switch($option) {
             $_SESSION['cartCount'] = $datos;
             if (empty($_SESSION['cartCount'])) {
                 unset($_SESSION['cartCount']);
+                header("Location: /SANSITO-MAPS");
+                exit();
             }
-            header("Location: /SANSITO-MAPS");
-            exit();
+            else {
+                header("Location: /SANSITO-MAPS/modules/cart.php");
+                exit();
+            }
         }
     break;
     case 6: // Verificación Registro Admin

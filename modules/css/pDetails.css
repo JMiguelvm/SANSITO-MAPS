@@ -169,3 +169,24 @@
 #comentario button:hover {
     background-color: #60606b;
 }
+
+.comentario__usuario {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 15px auto;
+    width: 800px;
+    display: block;
+    background-color: whitesmoke;
+}
+
+.comentario__usuario h4 {
+    color: #CA1214;
+    display: inline-block;
+}
+
+.comentario__usuario span {
+    margin-left: 10px;
+    background-color: #f02024;
+    border-radius: 0.3em;
+    padding: 0 4px;
+}
