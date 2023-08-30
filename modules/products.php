@@ -5,7 +5,7 @@
   <?php
 $sql = "SELECT `ID_producto`, `nombre_producto`, `imagen_producto`, `precio`, `descuento` FROM productos";
 $result = $conn->query($sql);
-
+include('modules/PAGO.php');
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $precioFormateado = number_format($row["precio"], 0, ',', '.');
@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
             echo '<p class="product-price">Precio: $' . $precioFormateado . ' COP</p>';
         }
         
-        echo '<button class="product-buy">Comprar</button>
+        echo '<button class="product-buy  boton__comprar" value="' . $row["ID_producto"] .'">Comprar</button>
               <form action="modules/validar.php?option=4" method="post">
                   <button name="productId" value="' . $row["ID_producto"] .'"type="submit" class="product-cart">Añadir al carrito</button>
               </form>      
@@ -65,3 +65,20 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 </div>
+<script>
+    const buy__button = document.querySelectorAll(".boton__comprar");
+    const pagoContainer = document.getElementById("pagoContainer");
+    
+    buy__button.forEach(function(boton) {
+        boton.addEventListener("click", function(){
+            pagoContainer.style.display="block";
+            // Lo que queda de está función es constancia de que me gusta complicarme la vida
+            var complique = document.getElementById("productoId");
+            complique.value = boton.value;
+    });
+    })
+
+    function cerrarForm() {
+        pagoContainer.style.display = "none";
+    }
+</script>

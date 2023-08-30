@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/pDetails1.css">
+    <link rel="stylesheet" href="css/pDetails.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
     <title>SANSITO-MAPS</title>
@@ -172,10 +172,25 @@
     ?>
     <script src="modules/js/category.js"></script>
     <script>
-        function changeImg(newSrc) {
+        function changeImg (newSrc) {
             var mainImg = document.getElementById("product__mainImage");
+            mainImg.setAttribute("src", newSrc)
             mainImg.setAttribute("src", newSrc);
         }
+
+        const comentarioTextArea = document.getElementById("comentario");
+        const comentarioCancelar = document.getElementById("cancelButton");
+        const comentarioEstrella = document.getElementsByClassName("pComentario");
+
+        for (let i = 0; i < comentarioEstrella.length; i++) {
+            comentarioEstrella[i].addEventListener("click", function () {
+                comentarioTextArea.style.display = "block";
+            });
+        }
+        comentarioCancelar.addEventListener("click", function () {
+            comentarioTextArea.style.display = "none";
+        });
+    </script>
     </script>
 </body>
 </html>
