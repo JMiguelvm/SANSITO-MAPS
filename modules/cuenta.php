@@ -20,7 +20,7 @@ if(isset($_SESSION['usuario'])){
                 <div>
                     <ul class="btns__ulStyle">
                         <li class="btns__style">
-                            <a class="btns__style__link" href="tusDatos.php">
+                            <a class="btns__style__link" onclick="abrirForm(main__datos)">
                                 <div class="link__container">
                                     <i class="btns__img fa-regular fa-user"></i>
                                     <span class="btns__text">Tus Datos</span>
@@ -28,7 +28,7 @@ if(isset($_SESSION['usuario'])){
                             </a>
                         </li>
                         <li class="btns__style">
-                            <a class="btns__style__link" href="seguridad.php">
+                            <a class="btns__style__link" onclick="abrirForm(main__secu)">
                                 <div class="link__container">
                                     <i class="btns__img fa-solid fa-shield-halved"></i>
                                     <span class="btns__text">Seguridad</span>
@@ -37,7 +37,7 @@ if(isset($_SESSION['usuario'])){
                         </li>
                     </ul>
                 </div>
-                <button type="button" class="boton__cerrar" onclick="cerrarForm(myAccount)">Cerrar</button>
+                <button type="button" id="boton__cerrarAccount" class="boton__cerrar">Cerrar</button>
             </div>
         </div>
 
@@ -58,16 +58,8 @@ if(isset($_SESSION['usuario'])){
                 </div>
                 <div class="container__id">
                     <button id="btn__id" class="container-button"><span id="button-text">ID usuario</span><span id="button-subText-id" class="button-subText">'.$idMostrable.'</span></button>
-                    <div class="form-container">
-                        <form action="/SANSITO-MAPS/modules/sql/editarSeguridad.php?id='.$idUser.'" method="POST" id="form__id" style="display: none;">
-                            <input class="form-input"  placeholder="'.$idMostrable.'" type="text" name="idSecurity" id="input__idSecurity" readonly>
-                            <div class="form-btn">
-                                <button id="btn-cerrar-id" type="button" onclick="cerrarForm(form__id);">Cerrar</button>
-                            </div>
-                        </form>
-                    </div>
                 </div>
-                <button type="button" class="boton__cerrar" onclick="cerrarForm(main__secu)">Cerrar</button>
+                <button type="button" class="boton__cerrar" id="cerrarSecu">Cerrar</button>
             </div>
         </div>
 
@@ -110,7 +102,7 @@ if(isset($_SESSION['usuario'])){
                         </form>
                     </div>
                 </div>
-                <button type="button" class="boton__cerrar" onclick="cerrarForm(main__datos)">Cerrar</button>
+                <button type="button" class="boton__cerrar" id="cerrarData">Cerrar</button>
             </div>
         </div>
     ';
@@ -120,36 +112,36 @@ if(isset($_SESSION['usuario'])){
 <script>
     const btn__passw = document.getElementById("btn__passw");
     const form__passw = document.getElementById("form__passw");
-    const myAccount = document.getElementById("myAccount");
+    
     const main__secu = document.getElementById("main__secu");
     const main__datos = document.getElementById("main__datos");
+
+    const btn__id = document.getElementById("btn__id");
+    const form__id = document.getElementById("form__id");
+    const btn__nombre = document.getElementById("btn__nombre");
+    const form__nombre = document.getElementById("form__nombre");
+    const btn__numContact = document.getElementById("btn__numContact");
+    const form__numContact = document.getElementById("form__numContact");
+    const btn__email = document.getElementById("btn__email");
+    const form__email = document.getElementById("form__email");
 
     btn__passw.addEventListener("click", function(){
         form__passw.style.display="block";
     });
 
-    const btn__id = document.getElementById("btn__id");
-    const form__id = document.getElementById("form__id");
-
     btn__id.addEventListener("click", function(){
         form__id.style.display="block";
     });
-    const btn__nombre = document.getElementById("btn__nombre");
-    const form__nombre = document.getElementById("form__nombre");
 
     btn__nombre.addEventListener("click", function(){
         form__nombre.style.display="block";
     });
 
-    const btn__numContact = document.getElementById("btn__numContact");
-    const form__numContact = document.getElementById("form__numContact");
-
     btn__numContact.addEventListener("click", function(){
         form__numContact.style.display="block";
     });
 
-    const btn__email = document.getElementById("btn__email");
-    const form__email = document.getElementById("form__email");
+    
 
     btn__email.addEventListener("click", function(){
         form__email.style.display="block";
@@ -180,14 +172,66 @@ if(isset($_SESSION['usuario'])){
 
         this.submit();
     });
-    function cerrarForm(form) {
-        form.style.display = "none";
-    }
-    
-    const userButton = document.getElementById("userButton");
+
+    const myAccount = document.getElementById("myAccount");
 
     function abrirForm(form) {
         form.style.display = "block";
     }
+
+    function cerrarForm(formId) {
+        const form = document.getElementById(`"${formId}"`);
+
+        if (form) {
+            form.style.display = "block";
+        } else {
+            console.log(`El elemento con el ID "${formId}" no fue encontrado.`);
+        }
+    }
+
+    const btn__cerrarPsw = document.getElementById("btn-cerrar-passw");
+
+    btn__cerrarPsw.addEventListener("click", function() {
+        form__passw.style.display = "none";
+    });
+
+    const btn__cerrarNum = document.getElementById("btn-cerrar-num");
+
+    btn__cerrarNum.addEventListener("click", function() {
+        form__numContact.style.display = "none";
+    });
+
+    const btn__cerrarEmail = document.getElementById("btn-cerrar-email");
+
+    btn__cerrarEmail.addEventListener("click", function() {
+        form__email.style.display = "none";
+    });
+
+
+
+    const btn__cerrarNomm = document.getElementById("btn-cerrar-nom");
+
+    btn__cerrarNomm.addEventListener("click", function() {
+        form__nombre.style.display = "none";
+    });
+
+    const boton__cerrarAccount = document.getElementById("boton__cerrarAccount");
+
+    boton__cerrarAccount.addEventListener("click", function() {
+        myAccount.style.display = "none";
+    });
+
+    const cerrarData = document.getElementById("cerrarData");
+
+    cerrarData.addEventListener("click", function() {
+        main__datos.style.display = "none";
+    });
+
+    const cerrarSecu = document.getElementById("cerrarSecu");
+
+    cerrarSecu.addEventListener("click", function() {
+        main__secu.style.display = "none";
+    });
+
 
         </script>

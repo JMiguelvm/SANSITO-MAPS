@@ -41,7 +41,7 @@
                 <label id="usericon" for="visible_ul" class="fa-solid fa-circle-user">         
                 </label>
                 <ul id="ulCont">
-                    <li><button id="userButton" onclick="abrirForm(myAccount)"><i class="fa-solid fa-wrench"></i> Configuración</button></li>
+                    <li><button id="userButton" onclick="abrirForm(myAccount);"><i class="fa-solid fa-wrench"></i> Configuración</button></li>
                     <li><a href="/SANSITO-MAPS/modules/pedidos.php"><i class="fa-solid fa-box"></i> Pedidos</a></li>
                     <li><a href="/SANSITO-MAPS/modules/validar.php?option=3"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
                 </ul>
