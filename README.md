@@ -27,10 +27,9 @@ Desarrollar una aplicación y/o web para dar un enfoque digital a las plazas com
 8. Pestaña de Filtros de Búsqueda Avanzada (mijail) ✔️
 9. Pestaña de Soporte o Contacto (cris) ✔️
 10. Pestaña de Perfil de tienda (Samuel)
-12. Pestaña de Favoritos(cris)
-13. Pestaña de Valoraciones y Reseñas(cris)
-14. Pestaña de Envío y Entrega (Jose) ✔️
-15. Pestaña de inicio y registro (cris) ✔️
+11. Pestaña de Valoraciones y Reseñas(cris)
+12. Pestaña de Envío y Entrega (Jose) ✔️
+13. Pestaña de inicio y registro (cris) ✔️
 
 ## Pestañas de vendedor
 1. Pestaña de Administración de Productos (Jose) ✔️
