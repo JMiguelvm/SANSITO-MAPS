@@ -190,6 +190,23 @@ body > div {
     font-size: 15px;
 }
 
+#userButton{
+    background-color: #b30f12;
+    border: none;
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    font-family: sans-serif;
+    transition: .5s;
+    cursor: pointer;
+}
+
+#userButton:hover {
+    color: #F9CE3A;
+    font-size: 15px;
+}
+
 #user_panel input {
     appearance: none;
 }
@@ -467,4 +484,151 @@ footer img {
     color: orange;
     background-color: #494952;
     border-radius: 0.5em;
+}
+
+#shopAdmin {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+}
+
+#shopAdmin input {
+    display: none;
+}
+
+#shopAdmin label {
+    background-color: #F9CE3A;
+    padding: 5px;
+    font-size: 40px;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#shopAdmin label:hover {
+    color: #b30f12;
+}
+
+#shopIcon:checked ~ #shopOpciones {
+    display: block;
+}
+
+#shopOpciones {
+    display: none;
+    position: fixed;
+    right: 90px;
+    list-style: none;
+    padding: 0;
+    padding: 10px;
+    border-radius: 0.5em;
+    background-color: #F9CE3A;
+    bottom: 50px;
+}
+
+#shopOpciones a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: 0.2s;
+}
+
+#shopOpciones a:hover {
+    color: #b30f12;
+}
+
+
+#tiendaReg {
+    color: #b30f12;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#tiendaReg:hover {
+    color: white;
+}
+
+#regTienda {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(35, 35, 35, 0.5);
+}
+
+#regTienda form {
+    padding: 15px;
+    border-radius: 0.5em;
+    background-color: white;
+    display: block;
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 300px;
+}
+
+#regTienda input {
+    padding: 5px;
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+}
+
+#regTienda h3 {
+    text-align: center;
+}
+
+#regTienda input::placeholder {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#regTienda textarea {
+    width: 100%;
+    min-height: 60px;
+}
+
+#regTienda textarea::placeholder {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+#regTienda button {
+    padding: 0;
+    border: none;
+    background-color: none;
+}
+
+.regTiendaButton {
+    background-color: #494952;
+    color: white;
+    border-radius: 0.3em;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    font-size: 17px;
+    margin: 0 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: .2s;
+}
+
+.regTiendaButton:hover {
+    background-color: #2F2F35;
+}
+#buttonsTienda {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 300px;
+}
+
+footer span {
+    transition: .2s;
+}
+
+footer span:hover {
+    cursor: pointer;
+    color: #b30f12;
 }

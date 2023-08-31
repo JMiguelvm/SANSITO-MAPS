@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="modules/css/header.css">
     <link rel="stylesheet" href="modules/css/product.css">
+    <link rel="stylesheet" href="modules/css/cuenta.css">
     <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -10,6 +11,7 @@
         <?php
             include('modules/sql/conexion.php');
             include('modules/header.php');
+            include('modules/cuenta.php');
             include('modules/category.php');
             include('modules/notification.php');     
         ?>
@@ -79,7 +81,7 @@
                         <h4 class="product-provider">Proveedor ID #</h4>
                         <div class="product-rating">
                             <span class="stars">&#9733; ' . ($f["promedio_valoracion"] ? round($f["promedio_valoracion"], 1) : 'N/A') . '</span>
-                            <span class="rating-count"><br>' . ($f["cantidad_valoraciones"] ?? 0) . ' valoraciones</span>
+                            <span class="rating-count"><br>' . ($f["cantidad_valoraciones"] ?? 0) . ' valoracion(es)</span>
                         </div>';
                 
                 if ($f["descuento"] > 0) {

@@ -20,8 +20,6 @@
                 </p>
             </div>
         </td></tr>
-        <tr><td>Stock disponible <input type="number" name="stock"></td></tr>
-        <tr><td>Descuento (NÚMERO)<input type="text" name="descuento"></td></tr>
             <p class="add-product__item">
                 Precio del producto <input type="number" name="PrecioProducto" class="add-product__input">
             </p>
