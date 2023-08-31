@@ -18,7 +18,7 @@
             <script src="modules/js/script.js"></script>
             <script src="modules/js/category.js"></script>
     </div>
-    <div class="product-container">
+    <div class="product-container" style="margin-top: 100px;">
     <?php
     $conexion = mysqli_connect("localhost", "root", "", "sansitooo");
     
@@ -80,7 +80,6 @@
                     <a href="modules/product_details.php?productId=' . $f["ID_producto"] . '"><img src="' . $f["imagen_producto"] . '" alt="' . $f["nombre_producto"] . '"></a>
                 </div>
                 <h2 class="product-name">' . $f["nombre_producto"] . '</h2>
-                <h4 class="product-provider">Proveedor ID #</h4>
                 <div class="product-rating">
                     <span class="stars">&#9733; ' . ($f["promedio_valoracion"] ? round($f["promedio_valoracion"], 1) : 'N/A') . '</span>
                     <span class="rating-count"><br>' . ($f["cantidad_valoraciones"] ?? 0) . ' valoraciones</span>

@@ -18,8 +18,9 @@
 <div id="regTienda">
     <form action="modules/sql/agregarTienda.php" method="post">
         <h3>Registre su tienda</h3>
-        <input type="text" name="nomTienda" id="nomTienda" placeholder="Ingrese el nombre de su tienda">
-        <textarea name="descTienda" id="descTienda" placeholder="Ingrese la descripción de su tienda"></textarea>
+        <input type="text" name="nomTienda" id="nomTienda" placeholder="Ingrese el nombre de su tienda" required>
+        <input type="text" name="imgTienda" id="imgTienda" placeholder="Ingrese una url con la imagen de su tienda" required>
+        <textarea name="descTienda" id="descTienda" placeholder="Ingrese la descripción de su tienda" required></textarea>
         <div id="buttonsTienda">
             <button class="regTiendaButton" type="submit">Enviar</button><button class="regTiendaButton" id="cerrarRegTienda"type="button">Cerrar</button>
         </div>

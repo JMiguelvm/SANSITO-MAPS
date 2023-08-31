@@ -3,7 +3,7 @@
 
   <div class="product-container">
   <?php
-$sql = "SELECT `ID_vendedor`, `ID_producto`, `nombre_producto`, `imagen_producto`, `precio`, `descuento` FROM productos";
+$sql = "SELECT `ID_vendedor`, `ID_producto`, `nombre_producto`, `imagen_producto`, `precio`, `descuento` FROM productos ORDER BY `nombre_producto`";
 $result = $conn->query($sql);
 include('modules/PAGO.php');
 if ($result->num_rows > 0) {
@@ -12,6 +12,15 @@ if ($result->num_rows > 0) {
         $promedioQuery = $conn->query("SELECT FORMAT(AVG(puntuacion), 1) AS promedio_valoracion
         FROM valoraciones
         WHERE ID_producto = " . $row["ID_producto"]);
+        if ($row["ID_vendedor"] != 0) {
+            $tienda = mysqli_query($conn, "SELECT 
+            nombre_empresa from vendedores where ID_vendedor = ".$row['ID_vendedor']);
+            $nTienda = $tienda->fetch_assoc();
+            $nombreTienda = $nTienda['nombre_empresa'];
+        }
+        else {
+            $nombreTienda = 'N/A';
+        }
 
         if ($promedioQuery->num_rows ) {
             $promedioRow = $promedioQuery->fetch_assoc();
@@ -29,7 +38,7 @@ if ($result->num_rows > 0) {
                         <a href="modules/product_details.php?productId=' . $row["ID_producto"] .'"><img src="' . $row["imagen_producto"] . '" alt="' . $row["nombre_producto"] . '"></a>
                     </div>
                     <h2 class="product-name">' . $row["nombre_producto"] . '</h2>
-                    <a class="product-provider" href="../../Bocetos/miTienda/index.php?ID_vendedor='.$row["ID_vendedor"].'">Proveedor: '.$row["ID_vendedor"].'</a>
+                    <a class="product-provider" href="modules/tienda.php?ID_vendedor='.$row["ID_vendedor"].'">Proveedor: '.$nombreTienda.'</a>
                     <div class="product-rating">
                         <span class="stars">&#9733; '.$promedioValoracion.'</span>
                     </div>';
