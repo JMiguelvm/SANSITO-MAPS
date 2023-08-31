@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cuenta.css">
     <link rel="stylesheet" href="css/orders.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,8 @@
         <?php
             include_once('sql/conexion.php');
             include('header.php');
+            include('cuenta.php');
+            include('category.php');
         ?>
 
         <?php

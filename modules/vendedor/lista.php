@@ -18,7 +18,6 @@ $result = mysqli_query($conn, $query);
     <h1>Listado de Productos</h1>
     <table>
     <a id="volver" href="/SANSITO-MAPS" style="display: block; margin: 0 auto; width: 150px;">Volver a SANSITO-MAPS</a>
-    <a id="volver" href="agregar.php" style="display: block; margin: 0 auto; margin-top: 5px; width: 50px; background-color: orange;">Agregar</a>
         <tr>
             <th>ID</th>
             <th>Nombre</th>

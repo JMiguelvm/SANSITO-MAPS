@@ -145,8 +145,8 @@
             <label for="shopIcon"><i class="fa-solid fa-store"></i></label>
             <input type="checkbox" id="shopIcon">
         <ul id="shopOpciones">
-            <li><a href="/SANSITO-MAPS/modules/vendedor/lista.php">Agregar</a></li>
-            <li><a href="/SANSITO-MAPS/modules/vProductos.php">Productos</a></li>
+            <li><a href="/SANSITO-MAPS/modules/vProductos.php">Agregar</a></li>
+            <li><a href="/SANSITO-MAPS/modules/vendedor/lista.php">Productos</a></li>
             <li><a href="/SANSITO-MAPS/modules/gPedidos.php">Pedidos</a></li>
         </ul>
         </div>
