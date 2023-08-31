@@ -130,11 +130,25 @@
             <div id="admin__options">
                 <h3>Administrar...</h6>
                 <ul>
-                    <li><a href="modules/admin/producto/lista.php">Productos</a></li>
-                    <li><a href="">Usuarios</a></li>
-                    <li><a href="">Categorias</a></li>
+                    <li><a href="/SANSITO-MAPS/modules/admin/producto/lista.php">Productos</a></li>
+                    <li><a href="/SANSITO-MAPS/modules/admin/usuario/lista.php">Usuarios</a></li>
                 </ul>
             </div>
+        </div>
+        ';
+     }
+ }
+ if (isset($_SESSION['vendedor'])) {
+    if ($_SESSION['vendedor'] == 1) {
+        echo '
+        <div id="shopAdmin">
+            <label for="shopIcon"><i class="fa-solid fa-store"></i></label>
+            <input type="checkbox" id="shopIcon">
+        <ul id="shopOpciones">
+            <li><a href="/SANSITO-MAPS/modules/vendedor/lista.php">Agregar</a></li>
+            <li><a href="/SANSITO-MAPS/modules/vProductos.php">Productos</a></li>
+            <li><a href="/SANSITO-MAPS/modules/gPedidos.php">Pedidos</a></li>
+        </ul>
         </div>
         ';
      }

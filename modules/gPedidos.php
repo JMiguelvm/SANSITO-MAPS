@@ -86,7 +86,7 @@
             $sql = "SELECT p.ID_pedido, p.estado_pedido, p.fecha_pedido, p.forma_pago, p.direccion_entrega, pr.nombre_producto, pr.imagen_producto
                     FROM pedidos p
                     INNER JOIN productos pr ON p.ID_producto = pr.ID_producto
-                    WHERE p.ID_usuario = $userID";
+                    WHERE p.ID_vendedor = $userID";
 
             $result = $conn->query($sql);
 

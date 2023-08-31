@@ -43,6 +43,9 @@
                  case 2:
                      echo '<p>Despachado</p>';
                  break;
+                 case 3:
+                    echo '<p>Entregado</p>';
+                break;
              }
                     echo' </div>
                      <div class="order__date">

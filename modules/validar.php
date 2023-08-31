@@ -18,6 +18,12 @@ switch($option) {
                 if ($user['tipo_usuario'] == 2) {
                     $_SESSION['admin'] = 1;
                 }
+                else if ($user['tipo_usuario'] == 1) {
+                    $_SESSION['vendedor'] = 1;
+                }
+                else {
+                    $_SESSION['justUser'] =  1;
+                }
                 $_SESSION['usuario'] =  $user['ID_usuario'];
                 header("Location: /SANSITO-MAPS");
                 exit();

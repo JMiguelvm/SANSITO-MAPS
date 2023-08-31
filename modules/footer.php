@@ -11,7 +11,26 @@
                 <p class="footer_title">Teléfono</p>
                 <p><i class="fa-solid fa-phone"></i>666-6666</p>
             </div>
-            <label for="">Registrar una tienda</label>
+            <?php if (isset($_SESSION['justUser'])){echo '<span onclick="abrirForm(regTienda);">Registrar una tienda</span>'; }?>
         </div>
     </div>
 </footer>
+<div id="regTienda">
+    <form action="modules/sql/agregarTienda.php" method="post">
+        <h3>Registre su tienda</h3>
+        <input type="text" name="nomTienda" id="nomTienda" placeholder="Ingrese el nombre de su tienda">
+        <textarea name="descTienda" id="descTienda" placeholder="Ingrese la descripción de su tienda"></textarea>
+        <div id="buttonsTienda">
+            <button class="regTiendaButton" type="submit">Enviar</button><button class="regTiendaButton" id="cerrarRegTienda"type="button">Cerrar</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    const regTienda = document.getElementById("regTienda");
+    const cerrarRegTienda = document.getElementById("cerrarRegTienda");
+
+    cerrarRegTienda.addEventListener("click", function() {
+        regTienda.style.display = "none";
+    });
+</script>
