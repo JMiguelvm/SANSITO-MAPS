@@ -85,3 +85,86 @@
 .searchBar > button > i {
     font-size: 18px;
 }
+
+.main__container{
+    display: flex;
+    margin-top: 70px;
+    flex-direction: row;
+}
+
+.container-info-tienda{
+    margin-top: 20px;
+    width: 30%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.info-tienda{
+    margin-top: 20px;
+    width: 350px;
+    height: 500px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(20, 20, 20, 0.1);
+    padding: 30px;
+    border-radius: 17px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.tienda-fotoName{
+    justify-content: center;
+    align-items: center;
+}
+
+#tienda-name{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#tienda-foto{
+    font-size: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tienda-foto{
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+#tienda-desc{
+    margin-top: 20px;
+}
+
+.container-productos{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 40px;
+    
+}
+
+.producto{
+    width: calc(33.99% - 20px);
+    height: calc(53.33% - 20px);
+    margin-bottom: 20px;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(20, 20, 20, 0.1);
+    padding: 30px;
+    border-radius: 17px;
+}
+
+
+#image__product{
+    width: 200px;
+}

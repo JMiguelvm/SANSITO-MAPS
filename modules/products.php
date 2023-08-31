@@ -3,7 +3,7 @@
 
   <div class="product-container">
   <?php
-$sql = "SELECT `ID_producto`, `nombre_producto`, `imagen_producto`, `precio`, `descuento` FROM productos";
+$sql = "SELECT `ID_vendedor`, `ID_producto`, `nombre_producto`, `imagen_producto`, `precio`, `descuento` FROM productos";
 $result = $conn->query($sql);
 include('modules/PAGO.php');
 if ($result->num_rows > 0) {
@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
                         <a href="modules/product_details.php?productId=' . $row["ID_producto"] .'"><img src="' . $row["imagen_producto"] . '" alt="' . $row["nombre_producto"] . '"></a>
                     </div>
                     <h2 class="product-name">' . $row["nombre_producto"] . '</h2>
-                    <h4 class="product-provider">Proveedor ID #</h4>
+                    <a class="product-provider" href="../../Bocetos/miTienda/index.php?ID_vendedor='.$row["ID_vendedor"].'">Proveedor: '.$row["ID_vendedor"].'</a>
                     <div class="product-rating">
                         <span class="stars">&#9733; -.-</span>
                     </div>';
