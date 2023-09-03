@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header1.css">
     <link rel="stylesheet" href="css/mapa.css">
     <link rel="stylesheet" href="css/cuenta.css">
     <link rel="stylesheet" href="css/product.css">

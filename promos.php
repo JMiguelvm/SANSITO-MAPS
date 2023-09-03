@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="modules/css/header.css">
+    <link rel="stylesheet" href="modules/css/header1.css">
     <link rel="stylesheet" href="modules/css/cuenta.css">
     <link rel="stylesheet" href="modules/css/product.css">
     <script src="https://kit.fontawesome.com/b414b30242.js" crossorigin="anonymous"></script>
