@@ -8,7 +8,6 @@
             <div class="searchBar">
             <button id="categoriasBtn"><i class="fas fa-bars"></i></button>
                 <input type="text" id="searchText" placeholder="Buscar...">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <a href="/SANSITO-MAPS" id="sansitoMaps">SANSITO-MAPS</a>
             <div id="user_panel">
@@ -41,8 +40,8 @@
                 <label id="usericon" for="visible_ul" class="fa-solid fa-circle-user">         
                 </label>
                 <ul id="ulCont">
-                    <li><a href="/SANSITO-MAPS/Bocetos/MiCuentaV2/index.php"><i class="fa-solid fa-wrench"></i> Configuración</a></li>
-                    <li><a href=""><i class="fa-solid fa-box"></i> Pedidos</a></li>
+                    <li><button id="userButton" onclick="abrirForm(myAccount);"><i class="fa-solid fa-wrench"></i> Configuración</button></li>
+                    <li><a href="/SANSITO-MAPS/modules/pedidos.php"><i class="fa-solid fa-box"></i> Pedidos</a></li>
                     <li><a href="/SANSITO-MAPS/modules/validar.php?option=3"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
                 </ul>
             </div>        
@@ -57,8 +56,9 @@
      <header>
      <div class="navBar">
          <div class="searchBar">
-             <input type="text" id="searchText" placeholder="Buscar...">
-             <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="categoriasBtn"><i class="fas fa-bars"></i></button>
+            <input type="text" id="searchText" placeholder="Buscar...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
          </div>
          <a href="/SANSITO-MAPS" id="sansitoMaps">SANSITO-MAPS</a>
          <div class="buttons">
@@ -119,6 +119,41 @@
  </script>
      ';
  }
+
+ if (isset($_SESSION['admin'])) {
+    if ($_SESSION['admin'] == 1) {
+        echo '
+        <div id="admin">
+            <label for="adminIcon"><i class="fa-solid fa-user-gear"></i>Admin panel</label>
+            <input type="checkbox" name="adminIcon" id="adminIcon">
+            <div id="admin__options">
+                <h3>Administrar...</h6>
+                <ul>
+                    <li><a href="/SANSITO-MAPS/modules/admin/producto/lista.php">Productos</a></li>
+                    <li><a href="/SANSITO-MAPS/modules/admin/usuario/lista.php">Usuarios</a></li>
+                </ul>
+            </div>
+        </div>
+        ';
+     }
+ }
+ if (isset($_SESSION['vendedor'])) {
+    if ($_SESSION['vendedor'] == 1) {
+        echo '
+        <div id="shopAdmin">
+            <label for="shopIcon"><i class="fa-solid fa-store"></i></label>
+            <input type="checkbox" id="shopIcon">
+        <ul id="shopOpciones">
+            <li><a href="/SANSITO-MAPS/modules/vProductos.php">Agregar</a></li>
+            <li><a href="/SANSITO-MAPS/modules/vendedor/lista.php">Productos</a></li>
+            <li><a href="/SANSITO-MAPS/modules/gPedidos.php">Pedidos</a></li>
+        </ul>
+        </div>
+        ';
+     }
+ }
 ?>
+
+
 
 

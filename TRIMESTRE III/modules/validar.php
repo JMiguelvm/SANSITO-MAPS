@@ -15,6 +15,15 @@ switch($option) {
         if ($mail == $user['correo']) {
             if ($password == $user['contrasena']) {
                 session_start();
+                if ($user['tipo_usuario'] == 2) {
+                    $_SESSION['admin'] = 1;
+                }
+                else if ($user['tipo_usuario'] == 1) {
+                    $_SESSION['vendedor'] = 1;
+                }
+                else {
+                    $_SESSION['justUser'] =  1;
+                }
                 $_SESSION['usuario'] =  $user['ID_usuario'];
                 header("Location: /SANSITO-MAPS");
                 exit();
@@ -45,12 +54,12 @@ switch($option) {
             $user = $consulta->fetch_assoc();
             session_start();
             $_SESSION['usuario'] =  $user['ID_usuario'];
-            header("Location: /SANSITO-MAPSp");
+            $_SESSION['justUser'] = 1;
+            header("Location: /SANSITO-MAPS");
             exit();
         }
         else {
-            echo "<script>alert('Las contraseñas deben ser iguales.');</script>";
-            header("Location: /SANSITO-MAPS");
+            header("Location: /SANSITO-MAPS?notification=5");
         }
     break;
     case 3: //Cerrar sesión
@@ -89,9 +98,36 @@ switch($option) {
             $_SESSION['cartCount'] = $datos;
             if (empty($_SESSION['cartCount'])) {
                 unset($_SESSION['cartCount']);
+                header("Location: /SANSITO-MAPS");
+                exit();
             }
+            else {
+                header("Location: /SANSITO-MAPS/modules/cart.php");
+                exit();
+            }
+        }
+    break;
+    case 6: // Verificación Registro Admin
+        $usuario = $_POST['username'];
+        $token = '3a7Fb9E1pR6XvKtY';
+        $tokenIngresado = $_POST['token'];
+        $mail = $_POST['email'];
+        $password = $_POST['password'];
+
+        if ($token == $tokenIngresado) {
+            $query = "INSERT INTO `usuarios`(`nombre`, `apellido`, `contacto`, `correo`, `contrasena`, `tipo_usuario`) VALUES ('$usuario','', 6666666,'$mail','$password', '2')";
+            mysqli_query($conn, $query);
+            $consulta = mysqli_query($conn, "SELECT * FROM usuarios WHERE correo = '".$mail."'");
+
+            $user = $consulta->fetch_assoc();
+            session_start();
+            $_SESSION['usuario'] =  $user['ID_usuario'];
+            $_SESSION['admin'] = 1;
             header("Location: /SANSITO-MAPS");
             exit();
+        }
+        else {
+            echo 'Token incorrecto. <a href="/SANSITO-MAPS">Volver</a>'; 
         }
     break;
 }
