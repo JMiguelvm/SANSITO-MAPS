@@ -360,7 +360,7 @@
 
 #myAccount {
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: rgba(35, 35, 35, 0.5);;
@@ -378,7 +378,7 @@
 
 #main__secu{
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: rgba(35, 35, 35, 0.5);
@@ -395,7 +395,7 @@
 
 #main__datos {
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: rgba(35, 35, 35, 0.5);

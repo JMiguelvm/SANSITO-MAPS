@@ -262,7 +262,7 @@ body > div {
 
 #log_cont {
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     top: 0;
     left: 0;

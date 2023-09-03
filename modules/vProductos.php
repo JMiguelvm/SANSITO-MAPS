@@ -19,6 +19,7 @@
             include('header.php');
             include('cuenta.php');
             include('category.php');
+            include('notification.php'); 
         ?>
     <style>
 

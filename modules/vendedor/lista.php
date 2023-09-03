@@ -22,14 +22,16 @@ $result = mysqli_query($conn, $query);
             <th>ID</th>
             <th>Nombre</th>
             <th>Precio</th>
+            <th>Stock</th>
             <th>Categoría</th>
             <th>Acciones </th>
         </tr>
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <tr>
                 <td><?php echo $row['ID_producto']; ?></td>
-                <td><?php echo $row['nombre_producto']; ?></td>
+                <td><?php echo '<a href="/SANSITO-MAPS/modules/product_details.php?productId='.$row['ID_producto'].'">'.$row['nombre_producto'].' </a>';?></td>
                 <td><?php echo $row['precio']; ?></td>
+                <td><?php echo $row['stock_disponible']; ?></td>
                 <td><?php echo $row['categoria']; ?></td>
                 <td>
                     <a href="editar.php?id=<?php echo $row['ID_producto']; ?>">Editar</a>
@@ -68,7 +70,12 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #999;
+    color: white;
+}
+
+table tr:nth-child(odd) {
+    background-color: whitesmoke;
 }
 
 a {

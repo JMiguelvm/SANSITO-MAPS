@@ -12,7 +12,7 @@
         $idVendedor = $_GET['idVendedor'];
         $sql = "INSERT INTO productos(nombre_producto,ID_vendedor,imagen_producto,descripcion,precio,stock_disponible,descuento,categoria) VALUES('$NombreProducto','$idVendedor','$ImagenProducto','$Descripcion','$Precio','$stock','$Descuento','$Categoria')";
         mysqli_query($conn, $sql);
-        header("Location: /SANSITO-MAPS/modules/vProductos.php");
+        header("Location: /SANSITO-MAPS/modules/vProductos.php?notification=6&title=Exito&text=Producto añadido con exito");
         exit();
     }
     else {

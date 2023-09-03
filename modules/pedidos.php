@@ -20,7 +20,7 @@
         ?>
 
         <?php
-         $sql = "SELECT ID_producto, estado_pedido FROM pedidos WHERE ID_usuario = ".$_SESSION['usuario'];
+         $sql = "SELECT ID_producto, estado_pedido, fecha_pedido, ID_vendedor FROM pedidos WHERE ID_usuario = ".$_SESSION['usuario'];
          $result = $conn->query($sql);
 
          if ($result->num_rows > 0) {
@@ -30,32 +30,50 @@
                  $sql = "SELECT nombre_producto, imagen_producto FROM productos WHERE ID_producto = ".$row['ID_producto'];
                  $queryResult = $conn->query($sql);
                  $arrayResult = $queryResult->fetch_assoc();
+                 $sql = "SELECT nombre_empresa FROM vendedores WHERE ID_vendedor=".$row["ID_vendedor"];
+                 $queryName = $conn->query($sql);
+                 $arrayName = $queryName->fetch_assoc();
+
+                 $fecha = new DateTime($row['fecha_pedido']);
+                 
+                 $fecha->modify('+6 days');
+                 
+                 $nuevaFecha = $fecha->format('Y-m-d');
+
                  echo '
                  <div class="order">
                      <div class="order__info">
                          <h5>' . $arrayResult["nombre_producto"] .'.</h5>
-                         <span>Nombre de tienda</span>
+                         <span>' . $arrayName["nombre_empresa"] .'</span>
                      </div>
                      <img src="' . $arrayResult["imagen_producto"] .'" alt="">
                      <div class="order__status">
                          <span>Estado</span>';
              switch($row['estado_pedido']) {
                  case 1:
-                     echo '<p>En preparación</p>';
-                 break;
-                 case 2:
-                     echo '<p>Despachado</p>';
-                 break;
-                 case 3:
-                    echo '<p>Entregado</p>';
-                break;
-             }
-                    echo' </div>
+                     echo '<p>En preparación</p></div>
                      <div class="order__date">
                          <span>Fecha estimada de entrega</span>
-                         <p>## de septiembre de 20##</p>
+                         <p>'.$nuevaFecha.'</p>
                      </div>
-                 </div>';
+                     ';
+                 break;
+                 case 2:
+                     echo '<p>Despachado</p></div>
+                     <div class="order__date">
+                         <span>Fecha estimada de entrega</span>
+                         <p>'.$nuevaFecha.'</p>
+                     </div>';
+                 break;
+                 case 3:
+                    echo '<p>Entregado</p></div><style>
+                    .order__status{
+                        width: 60%;
+                        }
+                    </style>';
+                break;
+             }
+                    echo'</div>';
              }
              echo '</div>';
          }

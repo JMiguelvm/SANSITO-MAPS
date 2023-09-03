@@ -12,5 +12,6 @@
     $conn->query($query);
     header("Location: /SANSITO-MAPS");
     $_SESSION['vendedor'] = 1;
+    unset($_SESSION['justUser']);
     exit();
 ?>

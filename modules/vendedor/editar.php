@@ -8,10 +8,12 @@ if(isset($_GET['id'])) {
         $new_name = $_POST['new_name'];
         $new_price = $_POST['new_price'];
         $new_category = $_POST['new_category'];
+        $new_stock = $_POST['new_stock'];
+        $new_img = $_POST['new_img'];
         
-        $update_query = "UPDATE productos SET nombre_producto='$new_name', precio='$new_price', categoria='$new_category' WHERE ID_producto=$product_id";
+        $update_query = "UPDATE productos SET nombre_producto='$new_name', precio='$new_price', imagen_producto='$new_img',stock_disponible='$new_stock', categoria='$new_category' WHERE ID_producto=$product_id";
         mysqli_query($conn, $update_query);
-        header("Location: lista.php");
+        header("Location: editar.php?id=$product_id");
     }
     
     $query = "SELECT * FROM productos WHERE ID_producto=$product_id";
@@ -33,6 +35,13 @@ if(isset($_GET['id'])) {
         
         <label>Precio:</label>
         <input type="text" name="new_price" value="<?php echo $product['precio']; ?>"><br>
+
+        <label>Stock:</label>
+        <input type="text" name="new_stock" value="<?php echo $product['stock_disponible']; ?>"><br>
+
+        <label>URL imagen:</label>
+        <img src="<?php echo $product['imagen_producto']; ?>" width="100px" heigth="100px">
+        <input type="text" name="new_img" value="<?php echo $product['imagen_producto']; ?>"><br>
         
         <label>Categoría:</label>
         <input type="text" name="new_category" value="<?php echo $product['categoria']; ?>"><br>

@@ -54,12 +54,12 @@ switch($option) {
             $user = $consulta->fetch_assoc();
             session_start();
             $_SESSION['usuario'] =  $user['ID_usuario'];
+            $_SESSION['justUser'] = 1;
             header("Location: /SANSITO-MAPS");
             exit();
         }
         else {
-            echo "<script>alert('Las contraseñas deben ser iguales.');</script>";
-            header("Location: /SANSITO-MAPS");
+            header("Location: /SANSITO-MAPS?notification=5");
         }
     break;
     case 3: //Cerrar sesión
@@ -127,7 +127,7 @@ switch($option) {
             exit();
         }
         else {
-            echo 'Token incorrecto.';
+            echo 'Token incorrecto. <a href="/SANSITO-MAPS">Volver</a>'; 
         }
     break;
 }

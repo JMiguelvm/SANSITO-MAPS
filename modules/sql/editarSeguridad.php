@@ -12,6 +12,6 @@
         mysqli_query($conn, "UPDATE usuarios set contrasena='$passwUser' WHERE ID_usuario=$idUser");
     }
 
-    header("Location: \SANSITO-MAPS\Bocetos\MiCuentaV2/seguridad.php");
+    header("Location: \SANSITO-MAPS");
     exit();
 ?>

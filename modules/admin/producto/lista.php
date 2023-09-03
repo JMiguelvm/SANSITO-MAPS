@@ -68,7 +68,12 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #999;
+    color: white;
+}
+
+table tr:nth-child(odd) {
+    background-color: whitesmoke;
 }
 
 a {
