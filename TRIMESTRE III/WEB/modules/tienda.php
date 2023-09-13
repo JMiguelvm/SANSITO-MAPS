@@ -85,7 +85,7 @@
                 <div class="producto">
                     <div>
                         <div class="product-image">
-                            <a href="/SANSITO-MAPS/modules/product_details.php?productId='.$productActual["ID_producto"].'"><img id="image__product" src="'.$imgProduct.'" alt=""></a>
+                            <a href="/SANSITO-MAPS/modules/product_details.php?productId='.$productActual["ID_producto"].'"><img id="image__product" src="'.$imgProduct.'" width="200px" heigth="200px"></a>
                         </div>
                         <h2 class="product-name">'.$nameProduct.'</h2>
                         <div class="product-rating">
