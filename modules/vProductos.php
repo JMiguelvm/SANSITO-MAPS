@@ -106,7 +106,7 @@
         </div>
 
         <div class="form-group">
-            <label for="imagen">URL de la Imagen:</label>
+            <label for="imagen">Imagen:</label>
             <input type="file" id="imagen" name="FotoProducto" accept="image/*" required>
         </div>
 
