@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
         echo '<div class="product">
                 <div class="product-inner">
                     <div class="product-image">
-                        <a href="modules/product_details.php?productId=' . $row["ID_producto"] .'"><img src="' . $row["imagen_producto"] . '" alt="' . $row["nombre_producto"] . '"></a>
+                        <a href="modules/product_details.php?productId=' . $row["ID_producto"] .'"><img src="' . $row["imagen_producto"] . '" alt="' . $row["nombre_producto"] . '" width="200px" heigth="200px"></a>
                     </div>
                     <h2 class="product-name">' . $row["nombre_producto"] . '</h2>
                     <a class="product-provider" href="modules/tienda.php?ID_vendedor='.$row["ID_vendedor"].'">Proveedor: '.$nombreTienda.'</a>
