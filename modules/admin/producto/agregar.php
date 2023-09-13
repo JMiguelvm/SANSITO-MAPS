@@ -6,14 +6,14 @@
     <title>Agregar</title>
 </head>
 <body>
-    <form method="post" action="../../sql/agregarproducto.php">
+    <form method="post" action="../../sql/agregarproducto.php" enctype="multipart/form-data">
         <div class="add-product">
             <div class="add-product__block">
                 <p class="add-product__item">
                     Nombre del producto<input type="text" name="NomProducto" class="add-product__input">
                 </p>
                 <p class="add-product__item">
-                    imagen del producto <input type="url" name="FotoProducto" class="add-product__input">
+                    Imagen del producto<br> <input type="file" id="imagen" name="FotoProducto" accept="image/*" required>
                 </p>
                 <p class="add-product__item">
                     Descripcion del producto <textarea name="descripcionProducto" class="add-product__textarea"></textarea>

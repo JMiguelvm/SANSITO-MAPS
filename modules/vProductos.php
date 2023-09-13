@@ -99,7 +99,7 @@
     <body>
     <div class="form-container">
     <h2>Formulario de Inserción de Productos</h2>
-    <form action="sql/agregarproducto.php?idVendedor=<?php echo $_SESSION['usuario'];?>" method="post" id="product-form">
+    <form action="sql/agregarproducto.php?idVendedor=<?php echo $_SESSION['usuario'];?>" method="post" id="product-form" enctype="multipart/form-data">
         <div class="form-group">
             <label for="nombre">Nombre del Producto:</label>
             <input type="text" id="nombre" name="NomProducto" required>
@@ -107,7 +107,7 @@
 
         <div class="form-group">
             <label for="imagen">URL de la Imagen:</label>
-            <input type="text" id="imagen" name="FotoProducto" required>
+            <input type="file" id="imagen" name="FotoProducto" accept="image/*" required>
         </div>
 
         <div class="form-group">
