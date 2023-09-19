@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 31, 2023 at 07:24 PM
+-- Generation Time: Sep 19, 2023 at 06:41 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -38,6 +38,11 @@ CREATE TABLE `pedidos` (
   `direccion_entrega` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `productos`
+--
 
 CREATE TABLE `productos` (
   `ID_producto` int(11) NOT NULL,
@@ -66,7 +71,6 @@ INSERT INTO `productos` (`ID_producto`, `ID_vendedor`, `nombre_producto`, `image
 (15, 1, 'Reloj Inteligente', 'https://www.toptecnouy.com/imgs/productos/productos31_33606.jpg', 'Un reloj inteligente con funciones avanzadas de seguimiento de actividad, notificaciones y monitoreo de la salud.', 300000.00, 'Electrónica', 50, '2023-08-31 16:30:19', 10),
 (16, 7, 'Zapatillas Deportivas', 'https://www.calzadosjuscar.com/img/modulos/stock0000624/productos/PhotoRoom___5_2_23_727_121128.jpg', 'Zapatillas cómodas y duraderas, ideales para correr y hacer ejercicio. Disponibles en varios colores y tallas.', 120000.00, 'Ropa y Calzado', 100, '2023-08-31 16:30:19', 5),
 (17, 8, 'Laptop Ultrabook', 'https://cdna.pcpartpicker.com/static/forever/images/product/6a840725fabb2edbccf35c919a095212.256p.jpg', 'Una laptop ultrabook ligera y potente, perfecta para trabajar y entretenimiento sobre la marcha.', 2000000.00, 'Tecnología', 30, '2023-08-31 16:30:19', 15),
-(18, 9, 'Cámara Réflex', 'https://s.cdnshm.com/catalog/mx/t/447589078/aboofan-antigua-camara-de-resina-de-moda-creativa-estilo-americano.jpg', 'Cámara réflex profesional con capacidades de captura impresionantes, ideal para fotógrafos aficionados y expertos.', 1500000.00, 'Fotografía', 20, '2023-08-31 16:30:19', 12),
 (19, 1, 'Televisor 4K', 'https://images-cdn.ubuy.co.in/63a0dbff10c9ab048c5a19d4-samsung-q60b-43-034-4k-ultra-hd.jpg', 'Televisor 4K con una calidad de imagen excepcional y acceso a plataformas de streaming.', 1800000.00, 'Electrónica', 25, '2023-08-31 16:30:19', 8),
 (20, 7, 'Camiseta de Algodón', 'https://image.made-in-china.com/202f0j00redYApqMnPcQ/Manufacture-Customized-Logo-Deni-Work-Shirts-for-Men.webp', 'Camiseta de algodón suave y cómoda, ideal para uso diario. Disponible en varios colores.', 40000.00, 'Ropa y Calzado', 150, '2023-08-31 16:30:19', 3),
 (21, 8, 'Tablet Android', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Nexus_7_%282013%29.png/250px-Nexus_7_%282013%29.png', 'Tablet Android con una pantalla de alta resolución y rendimiento fluido para multitarea.', 800000.00, 'Tecnología', 40, '2023-08-31 16:30:19', 10),
@@ -333,19 +337,6 @@ ALTER TABLE `valoraciones`
 --
 ALTER TABLE `pedidos`
   ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`ID_usuario`) REFERENCES `usuarios` (`ID_usuario`);
-
---
--- Constraints for table `valoraciones`
---
-ALTER TABLE `valoraciones`
-  ADD CONSTRAINT `valoraciones_ibfk_1` FOREIGN KEY (`ID_usuario`) REFERENCES `usuarios` (`ID_usuario`),
-  ADD CONSTRAINT `valoraciones_ibfk_2` FOREIGN KEY (`ID_producto`) REFERENCES `productos` (`ID_producto`);
-
---
--- Constraints for table `vendedores`
---
-ALTER TABLE `vendedores`
-  ADD CONSTRAINT `vendedores` FOREIGN KEY (`ID_vendedor`) REFERENCES `usuarios` (`ID_usuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
